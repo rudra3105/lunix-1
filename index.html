@@ -1140,8 +1140,75 @@
                         </div>
                         <!-- Footer Links End -->
 
+						 <div class="footer-links">
+                            <h3>Quick Links</h3>
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="about.html">About us</a></li>
+                                <li><a href="services.html">services</a></li>
+                                <li><a href="contact.html">contact us</a></li>
+                            </ul>
+                        </div>
                         <!-- Footer Links Start -->
-                       
+
+						<!-- Contact Info (Footer) -->
+<div class="footer-links footer-contact" itemscope itemtype="https://schema.org/Organization">
+  <h3>Contact Info</h3>
+
+  <ul class="footer-contact-list">
+    <li class="footer-contact-item">
+      <span class="footer-contact-label">Address:</span>
+      <address class="footer-contact-value" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+        <!-- Replace with your real address -->
+        <span itemprop="streetAddress">Plot / Street Name</span>,
+        <span itemprop="addressLocality">City</span>,
+        <span itemprop="addressRegion">State</span> <span itemprop="postalCode">PIN</span>,
+        <span itemprop="addressCountry">India</span>
+      </address>
+    </li>
+
+    <li class="footer-contact-item">
+      <span class="footer-contact-label">Email:</span>
+      <a class="footer-contact-value" href="mailto:info@lunixpharma.com" itemprop="email">info@lunixpharma.com</a>
+    </li>
+  </ul>
+</div>
+
+<!-- Scoped, minimal responsive styles -->
+<style>
+  .footer-contact .footer-contact-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .footer-contact .footer-contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 10px;
+    flex-wrap: wrap; /* makes it wrap nicely on small screens */
+  }
+  .footer-contact .footer-contact-label {
+    font-weight: 600;
+    min-width: 90px; /* keeps labels aligned on wider screens */
+  }
+  .footer-contact .footer-contact-value {
+    flex: 1 1 auto;
+    word-break: break-word; /* long emails/addresses won’t overflow */
+  }
+  .footer-contact address {
+    margin: 0; /* reset default address margin */
+    font-style: normal;
+  }
+
+  /* Optional tweak for very small devices */
+  @media (max-width: 480px) {
+    .footer-contact .footer-contact-label {
+      min-width: 80px;
+    }
+  }
+</style>
+
                         <!-- Footer Links End -->
                     </div>
                     <!-- Footer Links Box End -->
@@ -1199,6 +1266,7 @@
 </body>
 
 </html>
+
 
 
 
