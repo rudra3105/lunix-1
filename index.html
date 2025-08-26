@@ -1098,61 +1098,70 @@
     <!-- Our Testimonial Section End -->
 <br><br>
 
-	<!-- Newsletter Section Start -->
-<section id="newsletter" class="newsletter-section section_padding_top_100 section_padding_bottom_100">
+<!-- Newsletter Section Start -->
+<section id="newsletter" class="ls section_padding_top_100 section_padding_bottom_100">
   <div class="container">
-    <div class="row align-items-center">
-      
-      <!-- Left Text -->
-      <div class="col-lg-6 col-md-12 mb-4 mb-lg-0 text-center text-lg-left">
-        <h3 class="newsletter-title">Subscribe to Our Newsletter</h3>
-        <p class="newsletter-subtitle">Stay updated with the latest innovations, research updates, and healthcare solutions from Lunix Pharma.</p>
-      </div>
-      
-      <!-- Right Form -->
-      <div class="col-lg-6 col-md-12">
-        <form class="newsletter-form d-flex flex-wrap">
-          <input type="email" class="form-control me-2 mb-2 flex-grow-1" placeholder="Enter your email" required>
-          <button type="submit" class="theme_button color2 inverse mb-2">Subscribe</button>
-        </form>
+    <div class="newsletter-wrap">
+      <!-- Left -->
+      <div class="newsletter-left">
+        <h3 class="section_header">Subscribe to Our Newsletter</h3>
+        <p class="newsletter-subtitle">
+          Get updates on new formulations, research insights, and Lunix Pharma announcements.
+        </p>
       </div>
 
+      <!-- Right -->
+      <div class="newsletter-right">
+        <form class="newsletter-form" action="#" method="post" novalidate>
+          <label for="nl-email" class="sr-only">Email Address</label>
+          <input id="nl-email" name="email" type="email" placeholder="Enter your email" required>
+          <button type="submit" class="theme_button color2 inverse">Subscribe</button>
+        </form>
+        <small class="newsletter-note">We respect your privacy. Unsubscribe anytime.</small>
+      </div>
     </div>
   </div>
 </section>
 <!-- Newsletter Section End -->
 
-<!-- Scoped Styles -->
+<!-- Scoped responsive styles -->
 <style>
-  .newsletter-section {
-    background: #f9f9f9; /* light background */
-    border-top: 1px solid #e1e1e1;
-    border-bottom: 1px solid #e1e1e1;
+  /* Layout */
+  #newsletter .newsletter-wrap{
+    display:flex; align-items:center; justify-content:space-between;
+    gap:24px; flex-wrap:wrap;
   }
-  .newsletter-title {
-    font-size: 24px;
-    font-weight: 700;
-    margin-bottom: 10px;
+  #newsletter .newsletter-left{ flex:1 1 320px; min-width:260px; }
+  #newsletter .newsletter-right{ flex:1 1 420px; min-width:260px; }
+
+  /* Text */
+  #newsletter .newsletter-subtitle{ margin:8px 0 0; color:#666; }
+  #newsletter .newsletter-note{ display:block; margin-top:8px; color:#888; }
+
+  /* Form */
+  #newsletter .newsletter-form{
+    display:flex; align-items:center; gap:12px; width:100%;
   }
-  .newsletter-subtitle {
-    font-size: 16px;
-    color: #555;
-    margin-bottom: 0;
+  #newsletter .newsletter-form input{
+    flex:1 1 auto; min-width:0;
+    padding:12px 14px; border:1px solid #ddd; border-radius:4px;
+    font-size:16px; outline:none;
   }
-  .newsletter-form input {
-    min-width: 250px;
+  #newsletter .newsletter-form input:focus{ border-color:#bbb; }
+  #newsletter .newsletter-form button{
+    flex:0 0 auto; white-space:nowrap; padding:12px 18px;
   }
-  @media (max-width: 767px) {
-    .newsletter-form {
-      flex-direction: column;
-    }
-    .newsletter-form input {
-      margin-bottom: 10px;
-      min-width: 100%;
-    }
-    .newsletter-form button {
-      width: 100%;
-    }
+
+  /* Accessibility helper (hide label but keep for screen readers) */
+  .sr-only{
+    position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden;
+    clip:rect(0,0,0,0); border:0;
+  }
+
+  /* Mobile stack */
+  @media (max-width: 767px){
+    #newsletter .newsletter-form{ flex-direction:column; align-items:stretch; }
+    #newsletter .newsletter-form button{ width:100%; }
   }
 </style>
 
@@ -1317,6 +1326,7 @@
 </body>
 
 </html>
+
 
 
 
