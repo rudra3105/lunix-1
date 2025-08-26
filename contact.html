@@ -330,8 +330,13 @@
                         </div>
                         <!-- Footer Links End -->
 
-                        <!-- Footer Links Start -->
+						
                        
+                        <!-- Footer Links Start -->
+
+						<!-- Contact Info (Footer) -->
+
+
                         <!-- Footer Links End -->
                     </div>
                     <!-- Footer Links Box End -->
@@ -339,14 +344,62 @@
 
                 <div class="col-lg-3 col-md-5">
                     <!-- Footer Working Hour Box Start -->
-                    <div class="footer-working-hour-box footer-links">
-                        <h3>Working Hours</h3>
-                        <ul>
-                            <li>Mon - Fri:<span>10:00AM - 07:00PM</span></li>
-                            <li>Saturday:<span>12:00AM - 05:00PM</span></li>
-                            <li>Sunday:<span>Closed</span></li>
-                        </ul>
-                    </div>
+                    <div class="footer-links footer-contact" itemscope itemtype="https://schema.org/Organization">
+  <h3>Contact Info</h3>
+
+  <ul class="footer-contact-list">
+    <li class="footer-contact-item">
+      <span class="footer-contact-label">Address:</span>
+      <address class="footer-contact-value" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+        <!-- Replace with your real address -->
+        <span itemprop="streetAddress">211 E, 7th Street, Suite 620,</span>,
+        <span itemprop="addressLocality">Austin</span>,
+        <span itemprop="addressRegion">Texas</span> <span itemprop="postalCode">78701</span>,
+        <span itemprop="addressCountry">USA</span>
+      </address>
+    </li>
+
+    <li class="footer-contact-item">
+      <span class="footer-contact-label">Email:</span>
+      <a class="footer-contact-value" href="mailto:info@lunixpharma.com" itemprop="email">info@lunixpharma.com</a>
+    </li>
+  </ul>
+</div>
+
+<!-- Scoped, minimal responsive styles -->
+<style>
+  .footer-contact .footer-contact-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .footer-contact .footer-contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 10px;
+    flex-wrap: wrap; /* makes it wrap nicely on small screens */
+  }
+  .footer-contact .footer-contact-label {
+    font-weight: 600;
+    min-width: 90px; /* keeps labels aligned on wider screens */
+  }
+  .footer-contact .footer-contact-value {
+    flex: 1 1 auto;
+    word-break: break-word; /* long emails/addresses won’t overflow */
+  }
+  .footer-contact address {
+    margin: 0; /* reset default address margin */
+    font-style: normal;
+  }
+
+  /* Optional tweak for very small devices */
+  @media (max-width: 480px) {
+    .footer-contact .footer-contact-label {
+      min-width: 80px;
+    }
+  }
+</style>
                     <!-- Footer Working Hour Box End -->
                 </div>
 
@@ -396,8 +449,3 @@
 </body>
 
 </html>
-
-
-
-
-
