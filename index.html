@@ -74,93 +74,7 @@
                         </div>
 
                        <!-- Header Btn Start -->
-<!-- Header Btn Start -->
-<div class="header-btn brochure-dropdown">
-  <button class="btn-default btn-highlighted brochure-toggle" type="button"
-          aria-haspopup="true" aria-expanded="false">
-    Download Brochure <span class="brochure-caret"></span>
-  </button>
 
-  <ul class="brochure-menu" role="menu" aria-label="Brochure Downloads">
-    <li role="none">
-      <a role="menuitem" href="brochure1.pdf" download style="color: purple;">Brochure 1 (PDF)</a>
-    </li>
-    <li role="none">
-      <a role="menuitem" href="brochure2.pdf" download style="color: purple;">Brochure 2 (PDF)</a>
-    </li>
-  </ul>
-</div>
-<!-- Header Btn End -->
-
-<!-- Minimal styles scoped to the dropdown -->
-<style>
-  .brochure-dropdown { position: relative; }
-  .brochure-toggle { display: inline-flex; align-items: center; gap: 8px; }
-  .brochure-caret {
-    display:inline-block; width:0; height:0; border-left:5px solid transparent;
-    border-right:5px solid transparent; border-top:6px solid currentColor;
-    transform: translateY(1px);
-  }
-
-  .brochure-menu {
-    position: absolute; top: 100%; right: 0;
-    min-width: 220px; margin-top: 8px; padding: 8px 0;
-    background: #fff; border: 1px solid #e6e6e6; border-radius: 6px;
-    box-shadow: 0 8px 24px rgba(0,0,0,.08);
-    list-style: none; display: none; z-index: 1000;
-  }
-  .brochure-dropdown.open .brochure-menu { display: block; }
-
-  .brochure-menu a {
-    display: block; padding: 10px 14px; text-decoration: none;
-    color: inherit;
-  }
-  .brochure-menu a:hover { background: #f6f6f6; }
-
-  /* Mobile: make dropdown flow in the layout so it doesn’t overflow off-screen */
-  @media (max-width: 991px) {
-    .brochure-dropdown { width: 100%; }
-    .brochure-menu {
-      position: static; width: 100%; margin-top: 6px;
-      border-radius: 4px;
-    }
-  }
-</style>
-
-<!-- Tiny, dependency-free JS (supports multiple dropdowns if you add more later) -->
-<script>
-  (function () {
-    const dropdowns = document.querySelectorAll('.brochure-dropdown');
-    dropdowns.forEach(dd => {
-      const btn = dd.querySelector('.brochure-toggle');
-      const menu = dd.querySelector('.brochure-menu');
-
-      function close() {
-        dd.classList.remove('open');
-        btn.setAttribute('aria-expanded', 'false');
-      }
-      function toggle(e) {
-        e.preventDefault();
-        const isOpen = dd.classList.toggle('open');
-        btn.setAttribute('aria-expanded', String(isOpen));
-      }
-
-      btn.addEventListener('click', toggle);
-
-      // Close on outside click
-      document.addEventListener('click', (e) => {
-        if (!dd.contains(e.target)) close();
-      });
-
-      // Close on Escape
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') close();
-      });
-    });
-  })();
-</script>
-
-<!-- Header Btn End -->
 
                     </div>
                     <!-- Main Menu End -->
@@ -188,11 +102,112 @@
                         <!-- Section Title End -->
 
                         <!-- Hero Button Start -->
-                        <div class="hero-btn wow fadeInUp" data-wow-delay="0.4s">
-                            <a href="contact.html" class="btn-default btn-highlighted">Get Started</a>
-                            <a href="services.html" class="btn-default btn-border">Explore Our Services</a>
-                        </div>
-                        <!-- Hero Button End -->
+<div class="hero-btn wow fadeInUp" data-wow-delay="0.4s">
+    
+    <!-- Dropdown Brochure Button -->
+    <div class="hero-brochure-dropdown">
+        <button class="btn-default btn-highlighted brochure-toggle" type="button" aria-haspopup="true" aria-expanded="false">
+            Download Brochure <span class="brochure-caret"></span>
+        </button>
+        <ul class="brochure-menu" role="menu" aria-label="Brochure Downloads">
+            <li role="none">
+                <a role="menuitem" href="brochure1.pdf" download>Brochure 1 (PDF)</a>
+            </li>
+            <li role="none">
+                <a role="menuitem" href="brochure2.pdf" download>Brochure 2 (PDF)</a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Keep Existing Services Button -->
+    <a href="services.html" class="btn-default btn-border">Explore Our Services</a>
+</div>
+<!-- Hero Button End -->
+
+
+<!-- Styles -->
+<style>
+.hero-brochure-dropdown {
+  position: relative;
+  display: inline-block;
+}
+.hero-brochure-dropdown .brochure-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.hero-brochure-dropdown .brochure-caret {
+  display:inline-block;
+  width:0; height:0;
+  border-left:5px solid transparent;
+  border-right:5px solid transparent;
+  border-top:6px solid currentColor;
+  transform: translateY(2px);
+}
+
+.hero-brochure-dropdown .brochure-menu {
+  position: absolute;
+  top: 100%; left: 0;
+  min-width: 200px;
+  margin-top: 6px; padding: 6px 0;
+  background: #fff;
+  border: 1px solid #e1e1e1;
+  border-radius: 6px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.1);
+  list-style: none;
+  display: none;
+  z-index: 1000;
+}
+.hero-brochure-dropdown.open .brochure-menu { display: block; }
+.hero-brochure-dropdown .brochure-menu a {
+  display: block;
+  padding: 10px 14px;
+  text-decoration: none;
+  color: inherit;
+}
+.hero-brochure-dropdown .brochure-menu a:hover {
+  background: #f6f6f6;
+}
+@media (max-width: 767px) {
+  .hero-brochure-dropdown { width: 100%; }
+  .hero-brochure-dropdown .brochure-toggle,
+  .hero-brochure-dropdown .brochure-menu a { width: 100%; }
+}
+</style>
+
+
+<!-- JS -->
+<script>
+(function () {
+  const dropdowns = document.querySelectorAll('.hero-brochure-dropdown');
+  dropdowns.forEach(dd => {
+    const btn = dd.querySelector('.brochure-toggle');
+    const menu = dd.querySelector('.brochure-menu');
+
+    function close() {
+      dd.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+    }
+    function toggle(e) {
+      e.preventDefault();
+      const isOpen = dd.classList.toggle('open');
+      btn.setAttribute('aria-expanded', String(isOpen));
+    }
+
+    btn.addEventListener('click', toggle);
+
+    document.addEventListener('click', (e) => {
+      if (!dd.contains(e.target)) close();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') close();
+    });
+  });
+})();
+</script>
+
+
+                        
 
                         <!-- Hero Body Start -->
                         <div class="hero-body wow fadeInUp" data-wow-delay="0.6s">
@@ -252,7 +267,10 @@
                         </a>
                     </div>
                     <!-- Hero Video Circle End -->
+
+                    
                 </div>
+                
             </div>
         </div>
     </div>
