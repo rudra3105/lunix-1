@@ -10,9 +10,7 @@
     <meta name="keywords" content="">
     <meta name="author" content="Awaiken">
     <!-- Page Title -->
-    <title>Lunix Pharma | Manufacturing
-
-</title>
+    <title>Lunix Pharma</title>
     <!-- Favicon Icon -->
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
     <!-- Google Fonts Css-->
@@ -269,12 +267,204 @@
    
     
    <br><br><br>
-   <!-- Footer Start -->
+    <!-- Footer Start -->
     <footer class="main-footer bg-section dark-section">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4">
                     <!-- About Footer Start -->
+
+<!-- Newsletter Section Start (Footer) -->
+<section id="newsletter" class="footer-newsletter section_padding_top_60 section_padding_bottom_60">
+  <div class="container">
+    <div class="newsletter-wrap">
+      <!-- Left -->
+      <div class="newsletter-left">
+        <h3 class="section_header">Subscribe to Our Newsletter</h3>
+        <p class="newsletter-subtitle">
+          Get updates on new formulations, research insights, and Lunix Pharma announcements.
+        </p>
+      </div>
+
+      <!-- Right -->
+      <div class="newsletter-right">
+        <form id="newsletter-form" class="newsletter-form" method="POST" action="https://api.web3forms.com/submit" novalidate>
+          <input type="hidden" name="access_key" value="9c972c00-d3bd-4cfc-9959-687fe3eda848">
+          <input type="hidden" name="subject" value="New Newsletter Subscription - Lunix Pharma">
+          <input type="hidden" name="from_name" value="Lunix Pharma Website">
+          <input type="hidden" name="form_source" value="Newsletter">
+          <!-- Honeypot -->
+          <input type="checkbox" name="botcheck" class="sr-only" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;">
+
+          <label for="nl-email" class="sr-only">Email Address</label>
+          <input id="nl-email" name="email" type="email" placeholder="Enter your email" required>
+          <button type="submit" class="newsletter-btn" id="nl-submit">Subscribe</button>
+        </form>
+
+        <small class="newsletter-note">We respect your privacy. Unsubscribe anytime.</small>
+        <!-- Errors only (no success text; success uses modal) -->
+        <div id="nl-status" class="nl-error" aria-live="polite"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Newsletter Section End -->
+
+<!-- Thank You Popup (Modal) — same behavior as contact form: no icon, stays until OK -->
+<div id="nl-thanks-modal" class="nl-modal" aria-hidden="true" role="dialog" aria-modal="false" aria-labelledby="nl-thanks-title">
+  <div class="nl-modal__backdrop"></div>
+  <div class="nl-modal__dialog" role="document">
+    <div class="nl-modal__content">
+      <h3 id="nl-thanks-title">Thank you!</h3>
+      <p>You’re subscribed. Please check your inbox to confirm your email.</p>
+      <button class="theme_button color2 inverse min_width_button nl-modal__ok" type="button" id="nl-ok">OK</button>
+    </div>
+  </div>
+</div>
+
+<!-- Scoped Styles (no footer background set; inherits your dark blue) -->
+<style>
+  .footer-newsletter { color:#fff; }
+  .footer-newsletter .section_header { color:#fff; }
+  .footer-newsletter .newsletter-subtitle { color:#ddd; }
+  .footer-newsletter .newsletter-note { color:#bbb; font-size:13px; }
+
+  .footer-newsletter .newsletter-wrap{
+    display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap;
+  }
+  .footer-newsletter .newsletter-left{ flex:1 1 320px; min-width:260px; }
+  .footer-newsletter .newsletter-right{ flex:1 1 420px; min-width:260px; }
+
+  .footer-newsletter .newsletter-form{
+    display:flex; align-items:center; gap:12px; width:100%;
+  }
+  .footer-newsletter .newsletter-form input{
+    flex:1 1 auto; min-width:0; padding:12px 14px;
+    border:1px solid #555; border-radius:6px;
+    background:transparent; color:#fff; font-size:16px; outline:none;
+  }
+  .footer-newsletter .newsletter-form input::placeholder{ color:#aaa; }
+  .footer-newsletter .newsletter-form input:focus{
+    border-color:#00b4d8; box-shadow:0 0 0 2px rgba(0,180,216,.4);
+  }
+  .footer-newsletter .newsletter-btn{
+    background:linear-gradient(135deg,#00b4d8,#0073e6);
+    color:#fff; border:none; border-radius:6px;
+    padding:12px 28px; font-size:16px; font-weight:600; cursor:pointer;
+    transition:all .3s ease; box-shadow:0 4px 10px rgba(0,115,230,.25);
+  }
+  .footer-newsletter .newsletter-btn:hover{
+    background:linear-gradient(135deg,#0096c7,#005bb5); transform:translateY(-2px);
+  }
+
+  @media (max-width:767px){
+    .footer-newsletter .newsletter-form{ flex-direction:column; align-items:stretch; }
+    .footer-newsletter .newsletter-btn{ width:100%; }
+  }
+
+  /* Errors only (on dark footer) */
+  #nl-status{ margin-top:10px; font-size:14px; min-height:18px; }
+  #nl-status.nl-error{ color:#fff; } /* white error text for contrast */
+  /* (No success class, we show the modal instead) */
+
+  /* ===== Newsletter Modal (no icon, closes only on OK) ===== */
+  .nl-modal{ position:fixed; inset:0; display:none; z-index:1050; }
+  .nl-modal.is-open{ display:block; }
+  .nl-modal__backdrop{ position:absolute; inset:0; background:rgba(0,0,0,.55); }
+  .nl-modal__dialog{
+    position:relative; margin:8vh auto; background:#fff; border-radius:12px;
+    max-width:460px; width:92%; box-shadow:0 20px 50px rgba(0,0,0,.25); overflow:hidden;
+  }
+  .nl-modal__content{ padding:28px 22px 24px; text-align:center; }
+  .nl-modal__content h3{ margin:0 0 8px; font-size:22px; }
+  .nl-modal__content p{ margin:0 0 14px; font-size:15px; color:#444; }
+  .nl-modal__ok{ margin-top:6px; }
+  @media (max-width:575px){
+    .nl-modal__dialog{ margin:6vh auto; }
+    .nl-modal__content h3{ font-size:20px; }
+    .nl-modal__content p{ font-size:14px; }
+  }
+</style>
+
+<!-- AJAX submit + Thank You popup (same behavior as contact form) -->
+<script>
+  (function(){
+    const form   = document.getElementById('newsletter-form');
+    const email  = document.getElementById('nl-email');
+    const submit = document.getElementById('nl-submit');
+    const status = document.getElementById('nl-status');
+
+    const modal  = document.getElementById('nl-thanks-modal');
+    const okBtn  = document.getElementById('nl-ok');
+
+    function setError(msg){
+      status.textContent = msg || '';
+      status.className = msg ? 'nl-error' : '';
+    }
+
+    function openModal(){
+      modal.classList.add('is-open');
+      modal.setAttribute('aria-hidden','false');
+      modal.setAttribute('aria-modal','true');
+      document.body.style.overflow = 'hidden';
+      okBtn.focus(); // keep behavior consistent with contact form
+    }
+    function closeModal(){
+      modal.classList.remove('is-open');
+      modal.setAttribute('aria-hidden','true');
+      modal.setAttribute('aria-modal','false');
+      document.body.style.overflow = '';
+    }
+
+    // Close only via OK (no backdrop/ESC close, same as contact form)
+    okBtn.addEventListener('click', closeModal);
+
+    form.addEventListener('submit', async function(e){
+      e.preventDefault();
+      const value = (email.value || '').trim();
+      const valid = /^\S+@\S+\.\S+$/.test(value);
+      if(!valid){
+        setError('Please enter a valid email address.');
+        email.focus();
+        return;
+      }
+
+      submit.disabled = true;
+      const old = submit.textContent;
+      submit.textContent = 'Subscribing...';
+      setError('');
+
+      try{
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if(res.ok){
+          form.reset();
+          // No success text under the button; show popup only
+          setError('');
+          openModal();
+        }else{
+          let msg = 'Something went wrong. Please try again later.';
+          try{
+            const out = await res.json();
+            if(out && out.message) msg = out.message;
+          }catch(_){}
+          setError(msg);
+        }
+      }catch(_){
+        setError('Network error. Please try again.');
+      }finally{
+        submit.disabled = false;
+        submit.textContent = old;
+      }
+    });
+  })();
+</script>
+
+<br><br>
                     <div class="about-footer">
                         <!-- Footer Logo Start -->
                         <div class="footer-logo">
@@ -323,6 +513,7 @@
                     <!-- Footer Links Box End -->
                 </div>
 
+                
                 <div class="col-lg-3 col-md-5">
                     <!-- Footer Working Hour Box Start -->
                     <div class="footer-links footer-contact" itemscope itemtype="https://schema.org/Organization">
@@ -430,8 +621,6 @@
 </body>
 
 </html>
-
-
 
 
 
