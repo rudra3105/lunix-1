@@ -10,7 +10,7 @@
     <meta name="keywords" content="">
     <meta name="author" content="Awaiken">
     <!-- Page Title -->
-    <title>Contact | Lunix Pharmaa</title>
+    <title>Lunix Pharma</title>
     <!-- Favicon Icon -->
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
     <!-- Google Fonts Css-->
@@ -295,7 +295,7 @@
                             </div>
                             <!-- Section Title End -->
 
-                            <!-- Contact Form Start -->
+   <!-- Contact Form Start -->
 <div class="contact-form wow fadeInUp" data-wow-delay="0.4s">
   <form id="contactForm" action="https://api.web3forms.com/submit" method="POST" novalidate>
     <!-- REQUIRED: Web3Forms Access Key -->
@@ -336,6 +336,7 @@
 
       <div class="col-md-12">
         <button type="submit" class="btn-default btn-highlighted" id="contactSubmit"><span>Submit Message</span></button>
+        <!-- Status (errors only) -->
         <div id="msgSubmit" class="mt-3" aria-live="polite"></div>
       </div>
     </div>
@@ -345,38 +346,61 @@
 
 <!-- Thank You Popup (Modal) -->
 <div id="contact-thanks-modal" class="cf-modal" aria-hidden="true" role="dialog" aria-modal="false" aria-labelledby="cf-thanks-title">
-  <div class="cf-modal__backdrop" data-close-modal></div>
+  <div class="cf-modal__backdrop"></div>
   <div class="cf-modal__dialog" role="document">
-    <button class="cf-modal__close" type="button" aria-label="Close" data-close-modal>&times;</button>
     <div class="cf-modal__content">
-      <div class="cf-modal__icon">✅</div>
-      <h3 id="cf-thanks-title">Thank You!</h3>
+      <h3 id="cf-thanks-title">Thank you!</h3>
       <p>Your message has been sent successfully. We’ll get back to you soon.</p>
-      <button class="theme_button color2 inverse min_width_button cf-modal__ok" type="button" data-close-modal>OK</button>
+      <button class="theme_button color2 inverse min_width_button cf-modal__ok" type="button" id="cf-ok">OK</button>
     </div>
   </div>
 </div>
 
-<!-- Optional styles for status messages + Modal styles -->
+<!-- Styles: error overrides + modal -->
 <style>
-  #msgSubmit.success { color:#1a7f37; font-size:15px; }
-  #msgSubmit.error   { color:#b42318; font-size:15px; }
+  /* Space between fields and their error text */
+  #contactForm .help-block.with-errors {
+    margin-top: 8px;
+    min-height: 18px; /* keeps layout stable even when empty */
+  }
 
-  /* ===== Contact Thanks Modal ===== */
-  .cf-modal { position:fixed; inset:0; display:none; z-index:1050; }
-  .cf-modal.is-open { display:block; }
-  .cf-modal__backdrop { position:absolute; inset:0; background:rgba(0,0,0,.55); }
+  /* Force ALL error texts to white (handles various frameworks/classes) */
+  #contactForm .help-block.with-errors,
+  #contactForm .text-danger,
+  #contactForm .invalid-feedback,
+  #contactForm .parsley-errors-list li,
+  #contactForm .error,
+  #msgSubmit.error {
+    color: #fff !important; /* override theme reds */
+  }
+
+  /* Optional: if your theme adds red borders on invalid fields, soften it */
+  #contactForm .form-control.is-invalid,
+  #contactForm .form-control:invalid {
+    border-color: #ffb3b3; /* lighter red; remove if you want default */
+  }
+
+  /* Thank-you status below the button is disabled; we only show errors there */
+  #msgSubmit { margin-top: 14px; font-size: 15px; line-height: 1.5; }
+  /* No success class styling; success uses modal only. */
+
+  /* ===== Contact Thanks Modal (no icon, responsive, only closes on OK) ===== */
+  .cf-modal { position: fixed; inset: 0; display: none; z-index: 1050; }
+  .cf-modal.is-open { display: block; }
+  .cf-modal__backdrop { position: absolute; inset: 0; background: rgba(0,0,0,.55); }
   .cf-modal__dialog {
-    position:relative; margin:8vh auto; background:#fff; border-radius:12px; max-width:460px; width:92%;
-    box-shadow:0 20px 50px rgba(0,0,0,.25); overflow:hidden;
+    position: relative; margin: 8vh auto; background: #fff; border-radius: 12px;
+    max-width: 520px; width: 92%; box-shadow: 0 20px 50px rgba(0,0,0,.25); overflow: hidden;
   }
-  .cf-modal__close {
-    position:absolute; top:8px; right:10px; border:0; background:transparent; font-size:28px; line-height:1; cursor:pointer;
+  .cf-modal__content { padding: 28px 22px 24px; text-align: center; }
+  .cf-modal__content h3 { margin: 0 0 8px; font-size: 22px; }
+  .cf-modal__content p  { margin: 0 0 14px; font-size: 15px; color: #444; }
+  .cf-modal__ok { margin-top: 6px; }
+  @media (max-width: 575px){
+    .cf-modal__dialog { margin: 6vh auto; }
+    .cf-modal__content h3 { font-size: 20px; }
+    .cf-modal__content p  { font-size: 14px; }
   }
-  .cf-modal__content { padding:28px 22px 24px; text-align:center; }
-  .cf-modal__icon { font-size:40px; margin-bottom:10px; }
-  .cf-modal__ok { margin-top:10px; }
-  @media (max-width:575px){ .cf-modal__dialog{ margin:6vh auto; } }
 </style>
 
 <!-- AJAX submit + Thank You popup -->
@@ -387,11 +411,11 @@
     const msg = document.getElementById('msgSubmit');
 
     const modal = document.getElementById('contact-thanks-modal');
-    let autoCloseTimer = null;
+    const okBtn = document.getElementById('cf-ok');
 
-    function setStatus(text, ok) {
+    function setError(text) {
       msg.textContent = text || '';
-      msg.className = text ? (ok ? 'success' : 'error') : '';
+      msg.className = text ? 'error' : '';
     }
 
     function openModal() {
@@ -399,8 +423,7 @@
       modal.setAttribute('aria-hidden', 'false');
       modal.setAttribute('aria-modal', 'true');
       document.body.style.overflow = 'hidden';
-      clearTimeout(autoCloseTimer);
-      autoCloseTimer = setTimeout(closeModal, 4000); // auto-close after 4s
+      okBtn.focus(); // focus the OK for accessibility
     }
     function closeModal() {
       modal.classList.remove('is-open');
@@ -409,15 +432,8 @@
       document.body.style.overflow = '';
     }
 
-    // Close handlers
-    modal.addEventListener('click', function(e){
-      if (e.target.hasAttribute('data-close-modal') || e.target.classList.contains('cf-modal__backdrop')) {
-        closeModal();
-      }
-    });
-    document.addEventListener('keydown', function(e){
-      if (e.key === 'Escape' && modal.classList.contains('is-open')) closeModal();
-    });
+    // Only OK closes the modal (no backdrop/ESC close)
+    okBtn.addEventListener('click', closeModal);
 
     form.addEventListener('submit', async function (e) {
       e.preventDefault();
@@ -428,7 +444,7 @@
       const message = document.getElementById('message').value.trim();
       const validEmail = /^\S+@\S+\.\S+$/.test(email);
       if (!fname || !validEmail || !message) {
-        setStatus('Please fill out First Name, a valid Email, and Message.', false);
+        setError('Please fill out First Name, a valid Email, and Message.');
         return;
       }
 
@@ -436,7 +452,7 @@
       submitBtn.disabled = true;
       const oldLabel = submitBtn.innerText;
       submitBtn.innerText = 'Sending...';
-      setStatus('', true);
+      setError(''); // clear any previous errors
 
       try {
         const res = await fetch(form.action, {
@@ -446,19 +462,19 @@
         });
 
         if (res.ok) {
-          setStatus('Thank you! Your message has been sent.', true);
           form.reset();
-          openModal();
+          openModal();       // show popup only
+          setError('');      // ensure no message under button
         } else {
           let errText = 'Something went wrong. Please try again later.';
           try {
             const out = await res.json();
             if (out && out.message) errText = out.message;
           } catch (e) {}
-          setStatus(errText, false);
+          setError(errText);
         }
       } catch (err) {
-        setStatus('Network error. Please check your connection and try again.', false);
+        setError('Network error. Please check your connection and try again.');
       } finally {
         submitBtn.disabled = false;
         submitBtn.innerText = oldLabel;
@@ -466,6 +482,8 @@
     });
   })();
 </script>
+
+
                         </div>
 
                         <!-- Google Map Start -->
@@ -641,8 +659,6 @@
 </body>
 
 </html>
-
-
 
 
 
