@@ -45,96 +45,122 @@
         </div>
     </div>
     <!-- Preloader End -->
+<!-- Header Start -->
+<header class="main-header">
+  <div class="header-sticky">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <!-- Logo Start -->
+        <a class="navbar-brand" href="./">
+          <img src="images/logo.png" alt="Lunix Pharma Logo" style="width: 200px;">
+        </a>
+        <!-- Logo End -->
 
-    <!-- Header Start -->
-    <header class="main-header">
-        <div class="header-sticky">
-            <nav class="navbar navbar-expand-lg">
-                <div class="container">
-                    <!-- Logo Start -->
-                    <a class="navbar-brand" href="./">
-						<img src="images/logo.png" alt="Lunix Pharma Logo" style="width: 200px;">
-					</a>
-                    <!-- Logo End -->
+        <!-- Main Menu Start -->
+        <div class="collapse navbar-collapse main-menu">
+          <div class="nav-menu-wrapper">
+            <ul class="navbar-nav mr-auto" id="menu">
+              <li><a class="nav-link" href="index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+              <li class="nav-item"><a class="nav-link" href="services.html">Products</a></li>
+              <li class="nav-item"><a class="nav-link" href="team.html">Directors</a></li>
+              <li class="nav-item"><a class="nav-link" href="manufacturing.html">Manufacturing</a></li>
+              <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
 
-                    <!-- Main Menu Start -->
-                    <div class="collapse navbar-collapse main-menu">
-                        <div class="nav-menu-wrapper">
-                            <ul class="navbar-nav mr-auto" id="menu">
-                                <li><a class="nav-link" href="index.html">Home</a>
-                                    
-                                </li>
-                                <li class="nav-item"><a class="nav-link" href="about.html">About Us</a>
-                                    <li class="nav-item"><a class="nav-link" href="services.html">Products</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="team.html">Directors</a></li>
-                                      <li class="nav-item"><a class="nav-link" href="manufacturing.html">Manufacturing</a></li>
-                                  
-                                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
-                            </ul>
-                        </div>
+          <!-- Header Btn Start -->
+          <div class="header-btn brochure-dropdown">
+            <button class="btn-default btn-highlighted brochure-toggle" type="button"
+                    aria-haspopup="true" aria-expanded="false">
+              Download Brochure <span class="brochure-caret"></span>
+            </button>
 
-                       <!-- Header Btn Start -->
-<!-- Header Btn Start -->
-<div class="header-btn brochure-dropdown">
-  <button class="btn-default btn-highlighted brochure-toggle" type="button"
-          aria-haspopup="true" aria-expanded="false">
-    Download Brochure <span class="brochure-caret"></span>
-  </button>
+            <ul class="brochure-menu" role="menu" aria-label="Brochure Downloads">
+              <li role="none">
+                <a role="menuitem" href="/LP-Presentation.pdf" download>LP - Presentation</a>
+              </li>
+              <li role="none">
+                <a role="menuitem" href="/LP-Brochure.pdf" download>LP - Brochure</a>
+              </li>
+            </ul>
+          </div>
+          <!-- Header Btn End -->
+        </div>
+        <!-- Main Menu End -->
 
-  <ul class="brochure-menu" role="menu" aria-label="Brochure Downloads">
-    <li role="none">
-      <a role="menuitem" href="/LP-Presentation.pdf" download style="color: rgb(69, 86, 106)">LP - Presentation</a>
-    </li>
-    <li role="none">
-      <a role="menuitem" href="/LP-Brochure.pdf" download style="color: rgb(69, 86, 106)">LP - Brochure</a>
-    </li>
-  </ul>
-</div>
-<!-- Header Btn End -->
+        <div class="navbar-toggle"></div>
+      </div>
+    </nav>
+    <div class="responsive-menu"></div>
+  </div>
+</header>
+<!-- Header End -->
 
-<!-- Minimal styles scoped to the dropdown -->
 <style>
+  /* Sticky Header */
+  .main-header {
+    position: fixed !important;
+    top: 0; left: 0; right: 0;
+    width: 100%;
+    z-index: 10000 !important;
+    background: #fff;
+  }
+
+  .main-header .navbar { width: 100%; }
+
+  /* Nav links: soft gray + semi-bold */
+  .main-header .navbar-nav .nav-link {
+    color: rgba(0,0,0,0.6) !important; /* soft gray */
+    font-weight: 600; /* semi-bold for better visibility */
+    transition: color 0.2s ease;
+  }
+  .main-header .navbar-nav .nav-link:hover {
+    color: rgba(0,0,0,0.85) !important; /* darker on hover */
+  }
+
+  .main-header.header-shadow {
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  }
+
+  body.has-fixed-header { padding-top: var(--header-h, 80px) !important; }
+
+  /* Brochure dropdown */
   .brochure-dropdown { position: relative; }
   .brochure-toggle { display: inline-flex; align-items: center; gap: 8px; }
   .brochure-caret {
-    display:inline-block; width:0; height:0; border-left:5px solid transparent;
-    border-right:5px solid transparent; border-top:6px solid currentColor;
+    display:inline-block; width:0; height:0;
+    border-left:5px solid transparent;
+    border-right:5px solid transparent;
+    border-top:6px solid currentColor;
     transform: translateY(1px);
   }
-
   .brochure-menu {
     position: absolute; top: 100%; right: 0;
     min-width: 220px; margin-top: 8px; padding: 8px 0;
     background: #fff; border: 1px solid #e6e6e6; border-radius: 6px;
     box-shadow: 0 8px 24px rgba(0,0,0,.08);
-    list-style: none; display: none; z-index: 1000;
+    list-style: none; display: none; z-index: 11000;
   }
   .brochure-dropdown.open .brochure-menu { display: block; }
-
   .brochure-menu a {
-    display: block; padding: 10px 14px; text-decoration: none;
-    color: inherit;
+    display: block; padding: 10px 14px; text-decoration: none; color: rgba(0,0,0,0.7);
   }
   .brochure-menu a:hover { background: #f6f6f6; }
 
-  /* Mobile: make dropdown flow in the layout so it doesn’t overflow off-screen */
+  /* Mobile */
   @media (max-width: 991px) {
     .brochure-dropdown { width: 100%; }
-    .brochure-menu {
-      position: static; width: 100%; margin-top: 6px;
-      border-radius: 4px;
-    }
+    .brochure-menu { position: static; width: 100%; margin-top: 6px; border-radius: 4px; }
   }
 </style>
 
-<!-- Tiny, dependency-free JS (supports multiple dropdowns if you add more later) -->
 <script>
+  // Brochure dropdown
   (function () {
     const dropdowns = document.querySelectorAll('.brochure-dropdown');
     dropdowns.forEach(dd => {
       const btn = dd.querySelector('.brochure-toggle');
-      const menu = dd.querySelector('.brochure-menu');
-
       function close() {
         dd.classList.remove('open');
         btn.setAttribute('aria-expanded', 'false');
@@ -144,23 +170,44 @@
         const isOpen = dd.classList.toggle('open');
         btn.setAttribute('aria-expanded', String(isOpen));
       }
-
       btn.addEventListener('click', toggle);
-
-      // Close on outside click
-      document.addEventListener('click', (e) => {
-        if (!dd.contains(e.target)) close();
-      });
-
-      // Close on Escape
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') close();
-      });
+      document.addEventListener('click', (e) => { if (!dd.contains(e.target)) close(); });
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
     });
   })();
-</script>
 
-<!-- Header Btn End -->
+  // Fixed header padding + shadow
+  (function () {
+    const header = document.querySelector('.main-header');
+    if (!header) return;
+
+    const root = document.documentElement;
+    const body = document.body;
+
+    function setBodyPadding() {
+      const h = header.getBoundingClientRect().height;
+      root.style.setProperty('--header-h', h + 'px');
+      body.classList.add('has-fixed-header');
+    }
+
+    function onScroll() {
+      if (window.scrollY > 4) header.classList.add('header-shadow');
+      else header.classList.remove('header-shadow');
+    }
+
+    const ro = new ResizeObserver(setBodyPadding);
+    ro.observe(header);
+
+    setBodyPadding();
+    onScroll();
+
+    window.addEventListener('load', setBodyPadding);
+    window.addEventListener('resize', setBodyPadding, { passive: true });
+    window.addEventListener('scroll', onScroll, { passive: true });
+  })();
+</script>
+ 
+
 
                     </div>
                     <!-- Main Menu End -->
@@ -187,32 +234,39 @@
                         </div>
                         <!-- Section Title End -->
 
-                        <!-- Hero Button Start -->
+                       <!-- Hero Button Start -->
 <div class="hero-btn wow fadeInUp" data-wow-delay="0.4s">
-    
-    <!-- Dropdown Brochure Button -->
-    <div class="hero-brochure-dropdown">
-        <button class="btn-default btn-highlighted brochure-toggle" type="button" aria-haspopup="true" aria-expanded="false">
-            Download Brochure <span class="brochure-caret"></span>
-        </button>
-        <ul class="brochure-menu" role="menu" aria-label="Brochure Downloads">
-    <li role="none">
-      <a role="menuitem" href="Brochure1.pdf" download>LP - Presentation</a>
-    </li>
-    <li role="none">
-      <a role="menuitem" href="Brochure2.pdf" download>LP - Brochure</a>
-    </li>
-  </ul>
-    </div>
 
-    <!-- Keep Existing Services Button -->
-    <a href="services.html" class="btn-default btn-border">Explore Our Products</a>
+  <!-- Dropdown Brochure Button -->
+  <div class="hero-brochure-dropdown">
+    <button class="btn-default btn-highlighted brochure-toggle" type="button" aria-haspopup="true" aria-expanded="false">
+      Download Brochure <span class="brochure-caret"></span>
+    </button>
+    <ul class="brochure-menu" role="menu" aria-label="Brochure Downloads">
+      <li role="none">
+        <a role="menuitem" href="Brochure1.pdf" download>LP - Presentation</a>
+      </li>
+      <li role="none">
+        <a role="menuitem" href="Brochure2.pdf" download>LP - Brochure</a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Services Button -->
+  <a href="services.html" class="btn-default btn-border hero-secondary-btn">Explore Our Products</a>
 </div>
 <!-- Hero Button End -->
 
 
 <!-- Styles -->
 <style>
+.hero-btn {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* Brochure dropdown */
 .hero-brochure-dropdown {
   position: relative;
   display: inline-block;
@@ -221,6 +275,7 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
+  white-space: nowrap;
 }
 .hero-brochure-dropdown .brochure-caret {
   display:inline-block;
@@ -230,7 +285,6 @@
   border-top:6px solid currentColor;
   transform: translateY(2px);
 }
-
 .hero-brochure-dropdown .brochure-menu {
   position: absolute;
   top: 100%; left: 0;
@@ -254,10 +308,17 @@
 .hero-brochure-dropdown .brochure-menu a:hover {
   background: #f6f6f6;
 }
+
+/* Make both buttons same width on mobile */
 @media (max-width: 767px) {
-  .hero-brochure-dropdown { width: 100%; }
+  .hero-btn {
+    flex-direction: column;
+  }
+  .hero-brochure-dropdown,
   .hero-brochure-dropdown .brochure-toggle,
-  .hero-brochure-dropdown .brochure-menu a { width: 100%; }
+  .hero-secondary-btn {
+    width: 100%;
+  }
 }
 </style>
 
@@ -281,13 +342,8 @@
     }
 
     btn.addEventListener('click', toggle);
-
-    document.addEventListener('click', (e) => {
-      if (!dd.contains(e.target)) close();
-    });
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') close();
-    });
+    document.addEventListener('click', (e) => { if (!dd.contains(e.target)) close(); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
   });
 })();
 </script>
@@ -456,7 +512,14 @@
                             <!-- About Us Image End -->
 
                             <!-- About Image Content Start -->
-                          
+                            <div class="about-image-content">
+                                <ul>
+                                    <li>Pharmaceutical Manufacturing</li>
+                                    <li>Nutraceutical & Wellness Industry</li>
+                                    <li>Biotechnology & Life Sciences</li>
+                                    <li>Women’s & Child Health Solutions</li>
+                                </ul>
+                            </div>
                             <!-- About Image Content End -->
                         </div>
                         <!-- About Image Content Box End -->
@@ -915,7 +978,44 @@
                         <!-- How Work Image End -->
 
                         <!-- Satisfy Client Box Start -->
+                        <div class="satisfy-client-box">
+                            <!-- Satisfy Client Images Start -->
+                            <div class="satisfy-client-images">
+                                <div class="satisfy-client-image">
+                                    <figure class="image-anime">
+                                        <img src="images/satisfy-client-img-1.jpg" alt="">
+                                    </figure>
+                                </div>
+                                <div class="satisfy-client-image">
+                                    <figure class="image-anime">
+                                        <img src="images/satisfy-client-img-2.jpg" alt="">
+                                    </figure>
+                                </div>
+                                <div class="satisfy-client-image">
+                                    <figure class="image-anime">
+                                        <img src="images/satisfy-client-img-3.jpg" alt="">
+                                    </figure>
+                                </div>
+                                <div class="satisfy-client-image">
+                                    <figure class="image-anime">
+                                        <img src="images/satisfy-client-img-4.jpg" alt="">
+                                    </figure>
+                                </div>
+                                <div class="satisfy-client-image">
+                                    <figure class="image-anime">
+                                        <img src="images/satisfy-client-img-5.jpg" alt="">
+                                    </figure>
+                                </div>
+                            </div>
+                            <!-- Satisfy Client Images End -->
 
+                            <!-- Satisfy Client Content Start -->
+                            <div class="satisfy-client-content">
+                                <h3>5K+ Satisfied Clients</h3>
+                                <p>Trusted by organizations, institutions, and researchers worldwide.</p>
+                            </div>
+                            <!-- Satisfy Client Content End -->
+                        </div>
                         <!-- Satisfy Client Box End -->
                     </div>
                     <!-- How Work Image Box End -->
@@ -1186,7 +1286,7 @@
 
 
 <br><br><b></b>
-     <!-- Footer Start -->
+       <!-- Footer Start -->
     <footer class="main-footer bg-section dark-section">
         <div class="container">
             <div class="row">
@@ -1211,7 +1311,7 @@
           <input type="hidden" name="access_key" value="9c972c00-d3bd-4cfc-9959-687fe3eda848">
           <input type="hidden" name="subject" value="New Newsletter Subscription - Lunix Pharma">
           <input type="hidden" name="from_name" value="Lunix Pharma Website">
-          <input type="hidden" name="form_source" value="Newsletter">
+          <input type="hidden" name="form" value="Newsletter">
           <!-- Honeypot -->
           <input type="checkbox" name="botcheck" class="sr-only" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;">
 
@@ -1229,19 +1329,19 @@
 </section>
 <!-- Newsletter Section End -->
 
-<!-- Thank You Popup (Modal) — same behavior as contact form: no icon, stays until OK -->
+<!-- Thank You Popup (Modal) -->
 <div id="nl-thanks-modal" class="nl-modal" aria-hidden="true" role="dialog" aria-modal="false" aria-labelledby="nl-thanks-title">
   <div class="nl-modal__backdrop"></div>
   <div class="nl-modal__dialog" role="document">
     <div class="nl-modal__content">
       <h3 id="nl-thanks-title">Thank you!</h3>
-      <p>You’re subscribed. </p>
-      <button class="theme_button color2 inverse min_width_button nl-modal__ok" type="button" id="nl-ok">OK</button>
+      <p>You’re subscribed.</p>
+      <button class="btn-default btn-highlighted" type="button" id="nl-ok">OK</button>
     </div>
   </div>
 </div>
 
-<!-- Scoped Styles (no footer background set; inherits your dark blue) -->
+<!-- Scoped Styles (modal sits above sticky header) -->
 <style>
   .footer-newsletter { color:#fff; }
   .footer-newsletter .section_header { color:#fff; }
@@ -1283,29 +1383,35 @@
 
   /* Errors only (on dark footer) */
   #nl-status{ margin-top:10px; font-size:14px; min-height:18px; }
-  #nl-status.nl-error{ color:#fff; } /* white error text for contrast */
-  /* (No success class, we show the modal instead) */
+  #nl-status.nl-error{ color:#fff; }
 
-  /* ===== Newsletter Modal (no icon, closes only on OK) ===== */
-  .nl-modal{ position:fixed; inset:0; display:none; z-index:1050; }
-  .nl-modal.is-open{ display:block; }
-  .nl-modal__backdrop{ position:absolute; inset:0; background:rgba(0,0,0,.55); }
+  /* ===== Newsletter Modal (above sticky header, centered) ===== */
+  .nl-modal{
+    position:fixed; inset:0; display:none;
+    z-index:20000;           /* higher than your header's z-index */
+    align-items:center; justify-content:center; /* center the dialog */
+  }
+  .nl-modal.is-open{ display:flex; }
+  .nl-modal__backdrop{
+    position:absolute; inset:0; background:rgba(0,0,0,.55);
+  }
   .nl-modal__dialog{
-    position:relative; margin:8vh auto; background:#fff; border-radius:12px;
-    max-width:460px; width:92%; box-shadow:0 20px 50px rgba(0,0,0,.25); overflow:hidden;
+    position:relative; background:#fff; border-radius:12px;
+    max-width:460px; width:92%;
+    box-shadow:0 20px 50px rgba(0,0,0,.25); overflow:hidden;
+    z-index:1; /* above backdrop */
   }
   .nl-modal__content{ padding:28px 22px 24px; text-align:center; }
   .nl-modal__content h3{ margin:0 0 8px; font-size:22px; }
   .nl-modal__content p{ margin:0 0 14px; font-size:15px; color:#444; }
   .nl-modal__ok{ margin-top:6px; }
   @media (max-width:575px){
-    .nl-modal__dialog{ margin:6vh auto; }
     .nl-modal__content h3{ font-size:20px; }
     .nl-modal__content p{ font-size:14px; }
   }
 </style>
 
-<!-- AJAX submit + Thank You popup (same behavior as contact form) -->
+<!-- AJAX submit + Thank You popup -->
 <script>
   (function(){
     const form   = document.getElementById('newsletter-form');
@@ -1326,7 +1432,7 @@
       modal.setAttribute('aria-hidden','false');
       modal.setAttribute('aria-modal','true');
       document.body.style.overflow = 'hidden';
-      okBtn.focus(); // keep behavior consistent with contact form
+      okBtn.focus();
     }
     function closeModal(){
       modal.classList.remove('is-open');
@@ -1335,7 +1441,7 @@
       document.body.style.overflow = '';
     }
 
-    // Close only via OK (no backdrop/ESC close, same as contact form)
+    // Close only via OK (consistent with your contact form)
     okBtn.addEventListener('click', closeModal);
 
     form.addEventListener('submit', async function(e){
@@ -1362,7 +1468,6 @@
 
         if(res.ok){
           form.reset();
-          // No success text under the button; show popup only
           setError('');
           openModal();
         }else{
@@ -1382,6 +1487,7 @@
     });
   })();
 </script>
+
 
 <br><br>
                     <div class="about-footer">
@@ -1497,7 +1603,7 @@
                 <div class="col-lg-12">
                     <!-- Footer Copyright Start -->
                     <div class="footer-copyright-text">
-                        <p>© 2025 All Rights Reserved. </p>
+                        <p>Copyright © 2025 All Rights Reserved. </p>
                     </div>
                     <!-- Footer Copyright End -->
                 </div>
@@ -1540,8 +1646,6 @@
 </body>
 
 </html>
-
-
 
 
 
