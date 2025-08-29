@@ -10,7 +10,7 @@
     <meta name="keywords" content="">
     <meta name="author" content="Awaiken">
     <!-- Page Title -->
-    <title>Lunix Pharma | Trusted US Pharmaceutical Solutions for Better Health</title>
+    <title>Contact | Lunix Pharma</title>
     <!-- Favicon Icon -->
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
     <!-- Google Fonts Css-->
@@ -434,20 +434,25 @@
   /* Error message styling (white text as requested) */
   .form-error { margin-top:14px; font-size:15px; color:#fff; }
 
-  /* ===== Contact Thanks Modal ===== */
-  .cf-modal { position:fixed; inset:0; display:none; z-index:1050; }
-  .cf-modal.is-open { display:block; }
-  .cf-modal__backdrop { position:absolute; inset:0; background:rgba(0,0,0,.55); }
-  .cf-modal__dialog {
-    position:relative; margin:8vh auto; background:#fff; border-radius:12px;
-    max-width:520px; width:92%; box-shadow:0 20px 50px rgba(0,0,0,.25);
+  /* ===== Contact Thanks Modal (above sticky header, centered) ===== */
+  .cf-modal{
+    position:fixed; inset:0; display:none;
+    z-index:20000;              /* higher than sticky header */
+    align-items:center; justify-content:center; /* center dialog */
+  }
+  .cf-modal.is-open{ display:flex; }
+  .cf-modal__backdrop{ position:absolute; inset:0; background:rgba(0,0,0,.55); }
+  .cf-modal__dialog{
+    position:relative; background:#fff; border-radius:12px;
+    max-width:520px; width:92%;
+    box-shadow:0 20px 50px rgba(0,0,0,.25); overflow:hidden;
+    z-index:1; /* above backdrop */
   }
   .cf-modal__content { padding:28px 22px 24px; text-align:center; }
   .cf-modal__content h3 { margin:0 0 8px; font-size:22px; }
   .cf-modal__content p  { margin:0 0 14px; font-size:15px; color:#444; }
   .cf-modal__ok { margin-top:6px; }
   @media (max-width:575px){
-    .cf-modal__dialog { margin:6vh auto; }
     .cf-modal__content h3 { font-size:20px; }
     .cf-modal__content p  { font-size:14px; }
   }
@@ -466,7 +471,7 @@
 
   function setError(text) { errorBox.textContent = text || ''; }
 
-  // --- PHONE: allow digits only; sanitize on input & paste; enforce max length 15
+  // Digits-only behavior for phone
   function sanitizePhone() {
     const digitsOnly = phone.value.replace(/\D/g, '').slice(0, 15);
     if (phone.value !== digitsOnly) phone.value = digitsOnly;
@@ -479,12 +484,9 @@
     document.execCommand('insertText', false, digitsOnly);
   });
   phone.addEventListener('keydown', (e) => {
-    // Allow control keys
     const allowedKeys = ['Backspace','Delete','ArrowLeft','ArrowRight','Tab','Home','End'];
     if (allowedKeys.includes(e.key)) return;
-    // Block non-digit keys
     if (!/^[0-9]$/.test(e.key)) e.preventDefault();
-    // Enforce maxlength at keydown
     if (/^[0-9]$/.test(e.key) && phone.value.replace(/\D/g, '').length >= 15) e.preventDefault();
   });
 
@@ -555,6 +557,7 @@
 </script>
 
 
+
                         </div>
 
                         <!-- Google Map Start -->
@@ -569,7 +572,7 @@
     </div>
     <!-- Contact Form Map Section End -->
 
-      <!-- Footer Start -->
+       <!-- Footer Start -->
     <footer class="main-footer bg-section dark-section">
         <div class="container">
             <div class="row">
@@ -594,7 +597,7 @@
           <input type="hidden" name="access_key" value="9c972c00-d3bd-4cfc-9959-687fe3eda848">
           <input type="hidden" name="subject" value="New Newsletter Subscription - Lunix Pharma">
           <input type="hidden" name="from_name" value="Lunix Pharma Website">
-          <input type="hidden" name="form_source" value="Newsletter">
+          <input type="hidden" name="form" value="Newsletter">
           <!-- Honeypot -->
           <input type="checkbox" name="botcheck" class="sr-only" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;">
 
@@ -612,19 +615,19 @@
 </section>
 <!-- Newsletter Section End -->
 
-<!-- Thank You Popup (Modal) — same behavior as contact form: no icon, stays until OK -->
+<!-- Thank You Popup (Modal) -->
 <div id="nl-thanks-modal" class="nl-modal" aria-hidden="true" role="dialog" aria-modal="false" aria-labelledby="nl-thanks-title">
   <div class="nl-modal__backdrop"></div>
   <div class="nl-modal__dialog" role="document">
     <div class="nl-modal__content">
       <h3 id="nl-thanks-title">Thank you!</h3>
-      <p>You’re subscribed. </p>
-      <button class="theme_button color2 inverse min_width_button nl-modal__ok" type="button" id="nl-ok">OK</button>
+      <p>You’re subscribed.</p>
+      <button class="btn-default btn-highlighted" type="button" id="nl-ok">OK</button>
     </div>
   </div>
 </div>
 
-<!-- Scoped Styles (no footer background set; inherits your dark blue) -->
+<!-- Scoped Styles (modal sits above sticky header) -->
 <style>
   .footer-newsletter { color:#fff; }
   .footer-newsletter .section_header { color:#fff; }
@@ -666,29 +669,35 @@
 
   /* Errors only (on dark footer) */
   #nl-status{ margin-top:10px; font-size:14px; min-height:18px; }
-  #nl-status.nl-error{ color:#fff; } /* white error text for contrast */
-  /* (No success class, we show the modal instead) */
+  #nl-status.nl-error{ color:#fff; }
 
-  /* ===== Newsletter Modal (no icon, closes only on OK) ===== */
-  .nl-modal{ position:fixed; inset:0; display:none; z-index:1050; }
-  .nl-modal.is-open{ display:block; }
-  .nl-modal__backdrop{ position:absolute; inset:0; background:rgba(0,0,0,.55); }
+  /* ===== Newsletter Modal (above sticky header, centered) ===== */
+  .nl-modal{
+    position:fixed; inset:0; display:none;
+    z-index:20000;           /* higher than your header's z-index */
+    align-items:center; justify-content:center; /* center the dialog */
+  }
+  .nl-modal.is-open{ display:flex; }
+  .nl-modal__backdrop{
+    position:absolute; inset:0; background:rgba(0,0,0,.55);
+  }
   .nl-modal__dialog{
-    position:relative; margin:8vh auto; background:#fff; border-radius:12px;
-    max-width:460px; width:92%; box-shadow:0 20px 50px rgba(0,0,0,.25); overflow:hidden;
+    position:relative; background:#fff; border-radius:12px;
+    max-width:460px; width:92%;
+    box-shadow:0 20px 50px rgba(0,0,0,.25); overflow:hidden;
+    z-index:1; /* above backdrop */
   }
   .nl-modal__content{ padding:28px 22px 24px; text-align:center; }
   .nl-modal__content h3{ margin:0 0 8px; font-size:22px; }
   .nl-modal__content p{ margin:0 0 14px; font-size:15px; color:#444; }
   .nl-modal__ok{ margin-top:6px; }
   @media (max-width:575px){
-    .nl-modal__dialog{ margin:6vh auto; }
     .nl-modal__content h3{ font-size:20px; }
     .nl-modal__content p{ font-size:14px; }
   }
 </style>
 
-<!-- AJAX submit + Thank You popup (same behavior as contact form) -->
+<!-- AJAX submit + Thank You popup -->
 <script>
   (function(){
     const form   = document.getElementById('newsletter-form');
@@ -709,7 +718,7 @@
       modal.setAttribute('aria-hidden','false');
       modal.setAttribute('aria-modal','true');
       document.body.style.overflow = 'hidden';
-      okBtn.focus(); // keep behavior consistent with contact form
+      okBtn.focus();
     }
     function closeModal(){
       modal.classList.remove('is-open');
@@ -718,7 +727,7 @@
       document.body.style.overflow = '';
     }
 
-    // Close only via OK (no backdrop/ESC close, same as contact form)
+    // Close only via OK (consistent with your contact form)
     okBtn.addEventListener('click', closeModal);
 
     form.addEventListener('submit', async function(e){
@@ -745,7 +754,6 @@
 
         if(res.ok){
           form.reset();
-          // No success text under the button; show popup only
           setError('');
           openModal();
         }else{
@@ -765,6 +773,7 @@
     });
   })();
 </script>
+
 
 <br><br>
                     <div class="about-footer">
