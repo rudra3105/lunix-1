@@ -219,53 +219,191 @@
     </header>
     <!-- Header End -->
 
-                    </div>
-                    <!-- Main Menu End -->
-                    <div class="navbar-toggle"></div>
-                </div>
-            </nav>
-            <div class="responsive-menu"></div>
-        </div>
-    </header>
-    <!-- Header End -->
-
-    <!-- Page Header Start -->
-    <div class="page-header parallaxie">
+    <!-- Hero Section Start -->
+    <div class="hero dark-section parallaxie">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <!-- Page Header Box Start -->
-                    <div class="page-header-box">
-                        <h1 class="text-anime-style-3" data-cursor="-opaque">About us</h1>
-                        <nav class="wow fadeInUp">
-                            <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="index.html">home</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">About us</li>
-                            </ol>
-                        </nav>
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <!-- Hero Content Start -->
+                    <div class="hero-content">
+                        <!-- Section Title Start -->
+                        <div class="section-title">
+                            <h3 class="wow fadeInUp">Empowering Global Health with Advanced Pharma Solutions</h3>
+                            <h1 class="text-anime-style-3" data-cursor="-opaque">Trusted Excellence in Pharmaceutical & Nutraceutical Manufacturing</h1>
+                            <p class="wow fadeInUp" data-wow-delay="0.2s">Lunix Pharma delivers innovative, science-backed solutions across Nutritional, Pharmaceutical, and Biological segments — committed to global quality standards and healthier lives.</p>
+                        </div>
+                        <!-- Section Title End -->
+
+                       <!-- Hero Button Start -->
+<div class="hero-btn wow fadeInUp" data-wow-delay="0.4s">
+
+  <!-- Dropdown Brochure Button -->
+  <div class="hero-brochure-dropdown">
+    <button class="btn-default btn-highlighted brochure-toggle" type="button" aria-haspopup="true" aria-expanded="false">
+      Download Brochure <span class="brochure-caret"></span>
+    </button>
+    <ul class="brochure-menu" role="menu" aria-label="Brochure Downloads">
+      <li role="none">
+        <a role="menuitem" href="Brochure1.pdf" download>LP - Presentation</a>
+      </li>
+      <li role="none">
+        <a role="menuitem" href="Brochure2.pdf" download>LP - Brochure</a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Services Button -->
+  <a href="services.html" class="btn-default btn-border hero-secondary-btn">Explore Our Products</a>
+</div>
+<!-- Hero Button End -->
+
+
+<!-- Styles -->
+<style>
+.hero-btn {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* Brochure dropdown */
+.hero-brochure-dropdown {
+  position: relative;
+  display: inline-block;
+}
+.hero-brochure-dropdown .brochure-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+.hero-brochure-dropdown .brochure-caret {
+  display:inline-block;
+  width:0; height:0;
+  border-left:5px solid transparent;
+  border-right:5px solid transparent;
+  border-top:6px solid currentColor;
+  transform: translateY(2px);
+}
+.hero-brochure-dropdown .brochure-menu {
+  position: absolute;
+  top: 100%; left: 0;
+  min-width: 200px;
+  margin-top: 6px; padding: 6px 0;
+  background: #fff;
+  border: 1px solid #e1e1e1;
+  border-radius: 6px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.1);
+  list-style: none;
+  display: none;
+  z-index: 1000;
+}
+.hero-brochure-dropdown.open .brochure-menu { display: block; }
+.hero-brochure-dropdown .brochure-menu a {
+  display: block;
+  padding: 10px 14px;
+  text-decoration: none;
+  color: inherit;
+}
+.hero-brochure-dropdown .brochure-menu a:hover {
+  background: #f6f6f6;
+}
+
+/* Make both buttons same width on mobile */
+@media (max-width: 767px) {
+  .hero-btn {
+    flex-direction: column;
+  }
+  .hero-brochure-dropdown,
+  .hero-brochure-dropdown .brochure-toggle,
+  .hero-secondary-btn {
+    width: 100%;
+  }
+}
+</style>
+
+
+<!-- JS -->
+<script>
+(function () {
+  const dropdowns = document.querySelectorAll('.hero-brochure-dropdown');
+  dropdowns.forEach(dd => {
+    const btn = dd.querySelector('.brochure-toggle');
+    const menu = dd.querySelector('.brochure-menu');
+
+    function close() {
+      dd.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+    }
+    function toggle(e) {
+      e.preventDefault();
+      const isOpen = dd.classList.toggle('open');
+      btn.setAttribute('aria-expanded', String(isOpen));
+    }
+
+    btn.addEventListener('click', toggle);
+    document.addEventListener('click', (e) => { if (!dd.contains(e.target)) close(); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
+  });
+})();
+</script>
+
+
+                        
+
+                        <!-- Hero Body Start -->
+                        <div class="hero-body wow fadeInUp" data-wow-delay="0.6s">
+                            <!-- Hero Experience Box Start -->
+                            
+                            <!-- Hero Experience Box End -->
+
+                            <!-- Satisfy Client Box Start -->
+                            <div class="satisfy-client-box">
+                                <!-- Satisfy Client Images Start -->
+                               
+                                <!-- Satisfy Client Images End -->
+
+                                <!-- Satisfy Client Content Start -->
+                               
+                                <!-- Satisfy Client Content End -->
+                            </div>
+                            <!-- Satisfy Client Box End -->
+                        </div>
+                        <!-- Hero Body End -->
                     </div>
-                    <!-- Page Header Box End -->
+                    <!-- Hero Content End -->
                 </div>
+
+                <div class="col-lg-4">
+                    <!-- Hero Video Circle Start -->
+                    <div class="hero-video-circle">
+                        <a href="https://www.youtube.com/watch?v=Y-x0efG1seA" class="popup-video" data-cursor-text="Play">
+                            <img src="images/video-circle.svg" alt="">
+                        </a>
+                    </div>
+                    <!-- Hero Video Circle End -->
+
+                    
+                </div>
+                
             </div>
         </div>
     </div>
-    <!-- Page Header End -->
+    <!-- Hero Section End -->
 
     <!-- Scrolling Ticker Section Start -->
     <div class="our-scrolling-ticker">
         <!-- Scrolling Ticker Start -->
         <div class="scrolling-ticker-box">
-            <div class="scrolling-ticker-box">
            
 
-           
+
 
         </div>
         <!-- Scrolling Ticker End -->
     </div>
     <!-- Scrolling Ticker Section End -->
 
-    <!-- About Us Section Start -->
     <!-- About Us Section Start -->
     <div class="about-us">
         <div class="container">
@@ -293,7 +431,6 @@
                         <!-- Customer Rating Box Start -->
                         <div class="customer-rating-box">
                             <!-- Customer Rating Content Start -->
-                           
                             
                             <!-- Customer Rating Content End -->
 
@@ -345,7 +482,7 @@
                         <div class="about-counter-box">
                             <!-- About Counter Title Start -->
                             <div class="about-counter-title">
-                                
+                               
                                 <h3>Industry Collaborations</h3>
                             </div>
                             <!-- About Counter Title End -->
@@ -375,7 +512,14 @@
                             <!-- About Us Image End -->
 
                             <!-- About Image Content Start -->
-                           
+                            <div class="about-image-content">
+                                <ul>
+                                    <li>Pharmaceutical Manufacturing</li>
+                                    <li>Nutraceutical & Wellness Industry</li>
+                                    <li>Biotechnology & Life Sciences</li>
+                                    <li>Women’s & Child Health Solutions</li>
+                                </ul>
+                            </div>
                             <!-- About Image Content End -->
                         </div>
                         <!-- About Image Content Box End -->
@@ -386,6 +530,220 @@
         </div>
     </div>
     <!-- About Us Section End -->
+
+   <!-- Our Products Section Start -->
+<div class="our-services bg-section">
+  <div class="container">
+    <div class="row section-row align-items-center">
+      <div class="col-lg-6">
+        <!-- Section Title Start -->
+        <div class="section-title">
+          <h3 class="wow fadeInUp">Our Products</h3>
+          <h2 class="text-anime-style-3" data-cursor="-opaque">
+            Science-Driven Wellness Across Core Health Categories
+          </h2>
+        </div>
+        <!-- Section Title End -->
+      </div>
+      <div class="col-lg-6"><!-- Optional image --></div>
+    </div>
+
+    <div class="row service-list">
+      <!-- Product Card -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="product-card text-center h-100">
+          <div class="product-img">
+            <img src="images/Bone.jpeg" alt="Bone Health">
+          </div>
+          <h3>Bone Health</h3>
+          <p>Calcium, Vitamin D3, and co-factors to support bone density and strength.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="product-card text-center h-100">
+          <div class="product-img">
+            <img src="images/Joint.jpeg" alt="Joint Health">
+          </div>
+          <h3>Joint Health</h3>
+          <p>Actives to aid mobility, flexibility, and healthy cartilage function.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="product-card text-center h-100">
+          <div class="product-img">
+            <img src="images/sexual.jpeg" alt="Sexual Health">
+          </div>
+          <h3>Sexual Health</h3>
+          <p>Formulations for vitality, stamina, and hormonal balance.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="product-card text-center h-100">
+          <div class="product-img">
+            <img src="images/Women.jpeg" alt="Woman Health">
+          </div>
+          <h3>Woman Health</h3>
+          <p>Women-focused nutrients for menstrual, prenatal, and postnatal care.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="product-card text-center h-100">
+          <div class="product-img">
+            <img src="images/Digestive.jpeg" alt="Digestive Health">
+          </div>
+          <h3>Digestive Health</h3>
+          <p>Probiotics, enzymes, and fibers for gut balance and comfort.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="product-card text-center h-100">
+          <div class="product-img">
+            <img src="images/IMMUNE SYSTEM.jpeg" alt="Immune Health">
+          </div>
+          <h3>Immune Health</h3>
+          <p>Antioxidants and immunity boosters for round-the-year defense.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="product-card text-center h-100">
+          <div class="product-img">
+            <img src="images/Eye.jpeg" alt="Eye Health">
+          </div>
+          <h3>Eye Health</h3>
+          <p>Lutein, zeaxanthin & essentials for vision and retinal health.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="product-card text-center h-100">
+          <div class="product-img">
+            <img src="images/Heart.jpeg" alt="Heart Health">
+          </div>
+          <h3>Heart Health</h3>
+          <p>Cardio-support nutrients for healthy lipids and circulation.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="product-card text-center h-100">
+          <div class="product-img">
+            <img src="images/Nerve.jpeg" alt="Nerve Health">
+          </div>
+          <h3>Nerve Health</h3>
+          <p>Neuro-support vitamins and co-factors for nerve function.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Our Products Section End -->
+
+<!-- Scoped CSS -->
+<style>
+  .product-card {
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  }
+  .product-card h3 {
+    font-size: 18px;
+    margin: 15px 0 8px;
+    color: #000;
+  }
+  .product-card p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #333;
+    flex-grow: 1; /* makes all cards equal height */
+  }
+  .product-img {
+    width: 100%;
+    height: 180px; /* fixed image height */
+    overflow: hidden;
+    border-radius: 6px;
+  }
+  .product-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* keeps image uniform */
+  }
+</style>
+
+
+<br><br><br>
+    <!-- Manufacturing Section Start -->
+<section id="manufacturing" class="ds color section_padding_top_100 section_padding_bottom_150">
+  <div class="container">
+    <!-- Section Title -->
+    <div class="row">
+      <div class="col-12 text-center">
+        <h2 class="section_header">Manufacturing</h2>
+        <p class="highlight"><strong>LUNIX PHARMA manufactures with a global, compliant, and automated footprint.</strong></p>
+      </div>
+    </div>
+
+    <!-- Text Boxes (Responsive) -->
+    <div class="row columns_margin_bottom_20 topmargin_30">
+      <!-- Box 1 -->
+      <div class="col-lg-6 col-md-6 col-sm-12 mb-4">
+        <div class="with_padding big-padding with_border rounded h-100 d-flex flex-column">
+          <h4 class="hover-color2">Own & Associated Facilities</h4>
+          <p class="mb-0">
+            LUNIX PHARMA manufactures its products in its <strong>own</strong> and <strong>associated</strong> pharmaceutical and supplement plants across
+            <strong>India, Europe, and the USA</strong>.
+          </p>
+        </div>
+      </div>
+
+      <!-- Box 2 -->
+      <div class="col-lg-6 col-md-6 col-sm-12 mb-4">
+        <div class="with_padding big-padding with_border rounded h-100 d-flex flex-column">
+          <h4 class="hover-color2">Global Certifications</h4>
+          <p class="mb-0">
+            Associated manufacturing plants are <strong>USFDA</strong>, <strong>EU-GMP</strong>, <strong>MHRA</strong>, and <strong>WHO-GMP</strong> certified,
+            ensuring world-class quality and compliance.
+          </p>
+        </div>
+      </div>
+
+      <!-- Box 3 -->
+      <div class="col-lg-6 col-md-6 col-sm-12 mb-4">
+        <div class="with_padding big-padding with_border rounded h-100 d-flex flex-column">
+          <h4 class="hover-color2">Fully Automated Lines</h4>
+          <p class="mb-0">
+            Production uses <strong>fully automated machines</strong> with <strong>no human intervention</strong> for consistent, sterile, and efficient output.
+          </p>
+        </div>
+      </div>
+
+      <!-- Box 4 -->
+      <div class="col-lg-6 col-md-6 col-sm-12 mb-0">
+        <div class="with_padding big-padding with_border rounded h-100 d-flex flex-column">
+          <h4 class="hover-color2">Own Therapeutic Brands</h4>
+          <p class="mb-0">
+            LUNIX PHARMA <strong>markets its own brands</strong> that are unique and therapeutic, addressing key patient needs across therapies.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Manufacturing Section End -->
 
 
     <!-- Why Choose Us Section Start -->
@@ -404,7 +762,15 @@
                         <!-- Why Choose Image End -->
 
                         <!-- Satisfy Client Box Start -->
-                       
+                        <div class="satisfy-client-box">
+                            <!-- Satisfy Client Images Start -->
+                           
+                            <!-- Satisfy Client Images End -->
+
+                            <!-- Satisfy Client Content Start -->
+                           
+                            <!-- Satisfy Client Content End -->
+                        </div>
                         <!-- Satisfy Client Box End -->
                     </div>
                     <!-- Why Choose Image Box End -->
@@ -485,71 +851,8 @@
         </div>
     </div>
     <!-- Why Choose Us Section End -->
-    <!-- Our Core Value Section Start -->
-    <div class="our-core-value">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <!-- Core Value Image Start -->
-                    <div class="core-value-image">
-                        <div class="value-image-box-1">
-                            <div class="value-img-1">
-                                <figure class="image-anime reveal">
-                                    <img src="images/why-choose-image.jpg" alt="">
-                                </figure>
-                            </div>
-                        </div>
-                        <div class="value-image-box-2">
-                            <!-- About Experience Box Start -->
-                           
-                            <!-- About Experience Box End -->
 
-                            <div class="value-img-2">
-                                <figure class="image-anime">
-                                    <img src="images/why-choose-body-image.jpg" alt="">
-                                </figure>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Our Value Image End -->
-                </div>
-
-                <div class="col-lg-6">
-                    <!-- Core Value Content Start -->
-                    <div class="core-value-content">
-                        <!-- Section Title Start -->
-                        <div class="section-title">
-                            <h3 class="wow fadeInUp">Our Core Values</h3>
-                            <h2 class="text-anime-style-3" data-cursor="-opaque">Core Values That Drive Every Formula We Create</h2>
-                        </div>
-                        <!-- Section Title End -->
-
-                        <!-- Our Experiment List Start -->
-                        <div class="our-experiment-list">
-                            <!-- Our Experiment Item Start -->
-                            <div class="our-experiment-item wow fadeInUp" data-wow-delay="0.2s">
-                                <h3>Scientific integrity</h3>
-                                <p>We uphold the highest levels of honesty, accuracy, and scientific responsibility in every stage of our nutraceutical and pharmaceutical development.</p>
-                            </div>
-                            <!-- Our Experiment Item End -->
-
-                            <!-- Our Experiment Item Start -->
-                            <div class="our-experiment-item wow fadeInUp" data-wow-delay="0.4s">
-                                <h3>Innovation-First Mindset</h3>
-                                <p>Our research and manufacturing approach is rooted in innovation, helping us deliver advanced, science-backed wellness solutions for global healthcare needs.</p>
-                            </div>
-                            <!-- Our Experiment Item End -->
-                        </div>
-                        <!-- Our Experiment List End -->
-                    </div>
-                    <!-- Core Value Content End -->
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Our Value Section End -->
-
-     <!-- What We Do Section Start -->
+    <!-- What We Do Section Start -->
     <div class="what-we-do bg-section dark-section">
         <div class="container">
             <div class="row align-items-center">
@@ -628,173 +931,362 @@
         </div>
     </div>
     <!-- What We Do Section End -->
-     
-  
-               <br><br>
-<!-- Certifications Section (Image Gallery) Start -->
-<section id="certifications" class="ls section_padding_top_100 section_padding_bottom_100">
-  <div class="container">
-    <!-- Title -->
-    <div class="row">
-      <div class="col-12 text-center">
-        <h2 class="section_header">Our Certifications</h2>
-        <p class="highlight"><strong>Quality and compliance backed by globally recognized standards.</strong></p>
-      </div>
+<br><br>
+    
+
+    <!-- Intro Video Section Start -->
+    <div class="intro-video bg-section">
+        <div class="container-fluid">
+            <div class="row no-gutters align-items-center">
+                <div class="col-lg-12">
+                    <!-- Intro Video Box Start -->
+                    <div class="intro-video-box">
+                        <!-- Intro Video Image Start -->
+                        <div class="intro-video-image">
+                            <figure>
+                                <img src="images/intro-video-image.jpg" alt="">
+                            </figure>
+                        </div>
+                        <!-- Intro Video Image End -->
+
+                        <!-- Video Play Button Start -->
+                        <div class="video-play-border-button">
+                            <a href="/hv.mp4" class="popup-video" data-cursor-text="Play">Play</a>
+                        </div>
+                        <!-- Video Play Button End -->
+                    </div>
+                    <!-- Intro Video Box End -->
+                </div>
+            </div>
+        </div>
     </div>
+    <!-- Intro Video Section End -->
 
-    <!-- Grid -->
-    <div class="row topmargin_30">
-      <!-- ISO 2015 -->
-      <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12 mb-4">
-        <div class="with_padding big-padding with_border rounded h-100 cert-item">
-          <a href="/ISO 2015 certificate_page-0001.jpg" class="cert-link" data-title="ISO 2015 Certificate">
-            <div class="cert-thumb">
-              <img src="/ISO 2015 certificate_page-0001.jpg" alt="ISO 2015 Certificate">
-            </div>
-          </a>
-         
-        </div>
-      </div>
+    <!-- How It Work Section Start -->
+    <div class="how-it-work">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <!-- How Work Image Box Start -->
+                    <div class="how-work-image-box">
+                        <!-- How Work Image Start -->
+                        <div class="how-work-image image-anime">
+                            <figure>
+                                <img src="images/how-work-image.jpg" alt="">
+                            </figure>
+                        </div>
+                        <!-- How Work Image End -->
 
-      <!-- SQF – Food Safety Code -->
-      <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12 mb-4">
-        <div class="with_padding big-padding with_border rounded h-100 cert-item">
-          <a href="/SQF-Food-Safety-Code-for-Manufacturing-2024_page-0001.jpg" class="cert-link" data-title="SQF – Food Safety Code">
-            <div class="cert-thumb">
-              <img src="/SQF-Food-Safety-Code-for-Manufacturing-2024_page-0001.jpg" alt="SQF – Food Safety Code">
-            </div>
-          </a>
-          
-        </div>
-      </div>
+                        <!-- Satisfy Client Box Start -->
+                        <div class="satisfy-client-box">
+                            <!-- Satisfy Client Images Start -->
+                            <div class="satisfy-client-images">
+                                <div class="satisfy-client-image">
+                                    <figure class="image-anime">
+                                        <img src="images/satisfy-client-img-1.jpg" alt="">
+                                    </figure>
+                                </div>
+                                <div class="satisfy-client-image">
+                                    <figure class="image-anime">
+                                        <img src="images/satisfy-client-img-2.jpg" alt="">
+                                    </figure>
+                                </div>
+                                <div class="satisfy-client-image">
+                                    <figure class="image-anime">
+                                        <img src="images/satisfy-client-img-3.jpg" alt="">
+                                    </figure>
+                                </div>
+                                <div class="satisfy-client-image">
+                                    <figure class="image-anime">
+                                        <img src="images/satisfy-client-img-4.jpg" alt="">
+                                    </figure>
+                                </div>
+                                <div class="satisfy-client-image">
+                                    <figure class="image-anime">
+                                        <img src="images/satisfy-client-img-5.jpg" alt="">
+                                    </figure>
+                                </div>
+                            </div>
+                            <!-- Satisfy Client Images End -->
 
-      <!-- NSF -->
-      <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12 mb-4">
-        <div class="with_padding big-padding with_border rounded h-100 cert-item">
-          <a href="/NSF Certificate 2024_page-0001.jpg" class="cert-link" data-title="NSF Certificate">
-            <div class="cert-thumb">
-              <img src="/NSF Certificate 2024_page-0001.jpg" alt="NSF Certificate">
-            </div>
-          </a>
-          
-        </div>
-      </div>
+                            <!-- Satisfy Client Content Start -->
+                            <div class="satisfy-client-content">
+                                <h3>5K+ Satisfied Clients</h3>
+                                <p>Trusted by organizations, institutions, and researchers worldwide.</p>
+                            </div>
+                            <!-- Satisfy Client Content End -->
+                        </div>
+                        <!-- Satisfy Client Box End -->
+                    </div>
+                    <!-- How Work Image Box End -->
+                </div>
 
-      <!-- USFDA -->
-      <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12 mb-0">
-        <div class="with_padding big-padding with_border rounded h-100 cert-item">
-          <a href="/USFDA 2025_page-0001.jpg" class="cert-link" data-title="USFDA Certificate">
-            <div class="cert-thumb">
-              <img src="/USFDA 2025_page-0001.jpg" alt="USFDA Certificate">
+                <div class="col-lg-6">
+                    <!-- How Work Content Start -->
+                    <div class="how-work-content">
+                        <!-- Section Title Start -->
+                        <div class="section-title">
+                            <h3 class="wow fadeInUp">How it work</h3>
+                            <h2 class="text-anime-style-3" data-cursor="-opaque">From Raw Material to Finished Dose – Our Manufacturing Process</h2>
+                            <p class="wow fadeInUp" data-wow-delay="0.2s">At Lunix Pharma, we follow a structured and quality-first approach to manufacturing high-efficacy nutraceuticals and pharmaceuticals. From sourcing premium-grade raw materials to packaging compliant finished products, our end-to-end workflow ensures consistency, safety, and global export-readiness.
+
+</p>
+                        </div>
+                        <!-- Section Title End -->
+
+                        <!-- Work Steps List Start -->
+                        <div class="work-steps-list">
+                            <!-- How Steps Item Start -->
+                            <div class="work-steps-item wow fadeInUp" data-wow-delay="0.4s">
+                                <div class="work-step-no">
+                                    <h3>Step 01</h3>
+                                </div>
+                                <div class="work-step-content">
+                                    <h3>Raw Material Sourcing</h3>
+                                    <p>We procure scientifically validated, pharma-grade raw materials from trusted suppliers, with strict identity and purity checks.</p>
+                                </div>
+                            </div>
+                            <!-- How Steps Item End -->
+
+                            <!-- How Steps Item Start -->
+                            <div class="work-steps-item wow fadeInUp" data-wow-delay="0.6s">
+                                <div class="work-step-no">
+                                    <h3>Step 02</h3>
+                                </div>
+                                <div class="work-step-content">
+                                    <h3>In-House Formulation & R&D</h3>
+                                    <p>Our expert formulation team designs and tests each product for bioavailability, absorption, and compliance with global health standards.
+
+</p>
+                                </div>
+                            </div>
+                            <!-- How Steps Item End -->
+
+                            <!-- How Steps Item Start -->
+                            <div class="work-steps-item wow fadeInUp" data-wow-delay="0.8s">
+                                <div class="work-step-no">
+                                    <h3>Step 03</h3>
+                                </div>
+                                <div class="work-step-content">
+                                    <h3>Production & Quality Control</h3>
+                                    <p>GMP-certified facilities manufacture products using automated processes, followed by stringent QC testing at each batch level.</p>
+                                </div>
+                            </div>
+                            <!-- How Steps Item End -->
+                        </div>
+                        <!-- Work Steps List End -->
+                    </div>
+                    <!-- How Work Content End -->
+                </div>
             </div>
-          </a>
-          
         </div>
-      </div>
     </div>
-  </div>
-</section>
-<!-- Certifications Section End -->
+    <!-- How It Work Section End -->
 
-<!-- Lightbox Modal -->
-<div id="certLightbox" class="cert-modal" aria-hidden="true" role="dialog" aria-modal="false" aria-labelledby="certLightboxTitle">
-  <div class="cert-modal__backdrop" data-close></div>
-  <div class="cert-modal__dialog" role="document">
-    <button class="cert-modal__close" type="button" aria-label="Close" data-close>&times;</button>
-    <figure class="cert-modal__figure">
-      <img id="certLightboxImg" src="" alt="">
-      <figcaption id="certLightboxTitle"></figcaption>
-    </figure>
-  </div>
+    
+
+    <!-- Our FAQs Section Start -
+    <div class="our-faqs">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5">
+                    <!-- FAQs Content Start -
+                    <div class="faqs-content">
+                        <!-- Section Title Start -
+                        <div class="section-title">
+                            <h3 class="wow fadeInUp">Frequently Asked Questions</h3>
+                            <h2 class="text-anime-style-3" data-cursor="-opaque">Browse our most asked questions</h2>
+                            <p class="wow fadeInUp" data-wow-delay="0.2s">We've compiled answers to the most common questions.</p>
+                        </div>
+                        <!-- Section Title End -->
+
+                        <!-- Our Faqs Button Start -->
+                       
+                        <!-- Our Faqs Button End --
 </div>
+                    <!-- FAQs Content End -
+                </div>
 
-<!-- Styles -->
-<style>
-  /* Card hover */
-  #certifications .cert-item{ transition: transform .2s ease, box-shadow .2s ease; }
-  #certifications .cert-item:hover{ transform: translateY(-3px); box-shadow: 0 10px 24px rgba(0,0,0,.06); }
+                <div class="col-lg-7">
+                    <!-- FAQ Accordion Start --
+                    <div class="faq-accordion" id="accordion">
+                        <!-- FAQ Item Start --
+                        <div class="accordion-item wow fadeInUp">
+                            <h2 class="accordion-header" id="heading1">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                                    Q1. What products does Lunix Pharma manufacture?
+                                </button>
+                            </h2>
+                            <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="heading1" data-bs-parent="#accordion">
+                                <div class="accordion-body">
+                                    <p>Lunix Pharma manufactures a wide range of nutraceutical, pharmaceutical, and biological products, including tablets, capsules, powders, syrups, and probiotics.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- FAQ Item End -->
 
-  /* Thumbnails (uniform height, no crop of text) */
-  #certifications .cert-thumb{
-    position: relative; background:#f6f7fb; border:1px solid #e9ecf2; border-radius:6px;
-    height: 220px; display:flex; align-items:center; justify-content:center; overflow:hidden;
-  }
-  #certifications .cert-thumb img{
-    max-width: 100%; max-height: 100%;
-    width:auto; height:auto; display:block; object-fit: contain; /* show full certificate */
-  }
+                        <!-- FAQ Item Start --
+                        <div class="accordion-item wow fadeInUp" data-wow-delay="0.2s">
+                            <h2 class="accordion-header" id="heading2">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                                    Q2. Is Lunix Pharma a GMP-certified manufacturer?
+                                </button>
+                            </h2>
+                            <div id="collapse2" class="accordion-collapse collapse show" aria-labelledby="heading2" data-bs-parent="#accordion">
+                                <div class="accordion-body">
+                                    <p>Yes, Lunix Pharma operates under WHO-GMP and ISO-certified facilities, ensuring global standards of safety, quality, and compliance.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- FAQ Item End -->
 
-  /* Lightbox modal */
-  .cert-modal{ position:fixed; inset:0; display:none; z-index:1050; }
-  .cert-modal.is-open{ display:block; }
-  .cert-modal__backdrop{ position:absolute; inset:0; background:rgba(0,0,0,.6); }
-  .cert-modal__dialog{
-    position:relative; margin:4vh auto; max-width: 1000px; width:95%;
-    background:#fff; border-radius:10px; box-shadow:0 20px 50px rgba(0,0,0,.35); overflow:hidden;
-  }
-  .cert-modal__close{
-    position:absolute; top:8px; right:10px; border:0; background:transparent; font-size:28px; line-height:1; cursor:pointer;
-  }
-  .cert-modal__figure{ margin:0; padding:0; background:#111; }
-  .cert-modal__figure img{
-    display:block; width:100%; height:auto; max-height:78vh; object-fit:contain; background:#111;
-  }
-  .cert-modal__figure figcaption{
-    padding:10px 14px; font-size:14px; color:#333; background:#fff; border-top:1px solid #eee;
-  }
+                        <!-- FAQ Item Start -
+                        <div class="accordion-item wow fadeInUp" data-wow-delay="0.4s">
+                            <h2 class="accordion-header" id="heading3">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                                    Q3. Do you offer third-party or contract manufacturing?
+                                </button>
+                            </h2>
+                            <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3" data-bs-parent="#accordion">
+                                <div class="accordion-body">
+                                    <p>Yes, we provide third-party manufacturing services for businesses looking to outsource product development and production under their own brand.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- FAQ Item End -->
 
-  /* Responsive thumb height */
-  @media (max-width: 575px){
-    #certifications .cert-thumb{ height: 180px; }
-  }
-</style>
+                        <!-- FAQ Item Start --
+                        <div class="accordion-item wow fadeInUp" data-wow-delay="0.6s">
+                            <h2 class="accordion-header" id="heading4">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                                    Q4. Which markets or countries does Lunix Pharma serve?
+                                </button>
+                            </h2>
+                            <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4" data-bs-parent="#accordion">
+                                <div class="accordion-body">
+                                    <p>We supply to clients across 30+ countries, adhering to international export regulations and documentation requirements.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- FAQ Item End -->
 
-<!-- JS: open image in lightbox -->
-<script>
-  (function(){
-    const modal = document.getElementById('certLightbox');
-    const imgEl = document.getElementById('certLightboxImg');
-    const titleEl = document.getElementById('certLightboxTitle');
+                        <!-- FAQ Item Start --
+                        <div class="accordion-item wow fadeInUp" data-wow-delay="0.8s">
+                            <h2 class="accordion-header" id="heading5">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                                    Q5. What quality control measures are in place?
+                                </button>
+                            </h2>
+                            <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5" data-bs-parent="#accordion">
+                                <div class="accordion-body">
+                                    <p>Every batch undergoes rigorous in-house quality testing for purity, potency, and stability—ensuring reliable, consistent results.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- FAQ Item End --
+                    </div>
+                    <!-- FAQ Accordion End --
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Our FAQs Section End -->
 
-    function openLightbox(src, title){
-      imgEl.src = src;
-      imgEl.alt = title || 'Certificate';
-      titleEl.textContent = title || '';
-      modal.classList.add('is-open');
-      modal.setAttribute('aria-hidden','false');
-      modal.setAttribute('aria-modal','true');
-      document.body.style.overflow = 'hidden';
-    }
-    function closeLightbox(){
-      modal.classList.remove('is-open');
-      modal.setAttribute('aria-hidden','true');
-      modal.setAttribute('aria-modal','false');
-      imgEl.src = '';
-      document.body.style.overflow = '';
-    }
+    <!-- Our Testimonial Section Start -->
+    <div class="our-testimonials bg-section dark-section parallaxie">
+        <div class="container">
+            <div class="row section-row align-items-center">
+                <div class="col-lg-12">
+                    <!-- Section Title Start -->
+                    <div class="section-title section-title-center">
+                        <h3 class="wow fadeInUp">Our Testimonials</h3>
+                        <h2 class="text-anime-style-3" data-cursor="-opaque">What our clients say about their experience with us</h2>
+                    </div>
+                    <!-- Section Title End -->
+                </div>
+            </div>
 
-    // Click on certificate
-    document.addEventListener('click', function(e){
-      const link = e.target.closest('.cert-link');
-      if(!link) return;
-      e.preventDefault();
-      openLightbox(link.getAttribute('href'), link.getAttribute('data-title') || link.querySelector('img')?.alt || 'Certificate');
-    });
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- Testimonial Slider Start -->
+                    <div class="testimonial-slider">
+                        <div class="swiper">
+                            <div class="swiper-wrapper" data-cursor-text="Drag">
+                                <!-- Testimonial Slide Start -->
+                                <div class="swiper-slide">
+                                    <div class="testimonial-item">
+                                        
+                                        <div class="testimonial-content">
+                                            <div class="testimonial-quote">
+                                                <img src="images/testimonial-quote.svg" alt="">
+                                            </div>
+                                            <div class="testimonial-info">
+                                                <p>Lunix Pharma's nutraceutical range is clinically effective and consistently high in quality. Their commitment to science-backed formulations is unmatched.</p>
+                                            </div>
+                                            <div class="author-content">
+                                                <h3>Dr. Meera Shah</h3>
+                                                <p>Clinical Nutritionist</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Testimonial Slide End -->
 
-    // Close actions
-    modal.addEventListener('click', function(e){
-      if (e.target.hasAttribute('data-close') || e.target.classList.contains('cert-modal__backdrop')) closeLightbox();
-    });
-    document.addEventListener('keydown', function(e){
-      if(e.key === 'Escape' && modal.classList.contains('is-open')) closeLightbox();
-    });
-  })();
-</script>
+                                <!-- Testimonial Slide Start -->
+                                <div class="swiper-slide">
+                                    <div class="testimonial-item">
+                                        
+                                        <div class="testimonial-content">
+                                            <div class="testimonial-quote">
+                                                <img src="images/testimonial-quote.svg" alt="">
+                                            </div>
+                                            <div class="testimonial-info">
+                                                <p>Working with Lunix Pharma for third-party manufacturing has been seamless. Their export support, certifications, and on-time delivery are truly impressive.</p>
+                                            </div>
+                                            <div class="author-content">
+                                                <h3>Anil</h3>
+                                                <p>Export Partner</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Testimonial Slide End -->
+
+                                <!-- Testimonial Slide Start -->
+                                <div class="swiper-slide">
+                                    <div class="testimonial-item">
+                                       
+                                        <div class="testimonial-content">
+                                            <div class="testimonial-quote">
+                                                <img src="images/testimonial-quote.svg" alt="">
+                                            </div>
+                                            <div class="testimonial-info">
+                                                <p>I confidently recommend Lunix Pharma products to my patients. From joint support to women’s health — their solutions are reliable and results-driven.</p>
+                                            </div>
+                                            <div class="author-content">
+                                                <h3> Dr. Rahul Desai</h3>
+                                                <p>General Physician</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Testimonial Slide End -->
+                            </div>
+                            <div class="testimonial-pagination"></div>
+                        </div>
+                    </div>
+                    <!-- Testimonial Slider End -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Our Testimonial Section End -->
+<br><br><br>
 
 
 
-
-      <!-- Footer Start -->
+<br><br><b></b>
+       <!-- Footer Start -->
     <footer class="main-footer bg-section dark-section">
         <div class="container">
             <div class="row">
@@ -819,7 +1311,7 @@
           <input type="hidden" name="access_key" value="9c972c00-d3bd-4cfc-9959-687fe3eda848">
           <input type="hidden" name="subject" value="New Newsletter Subscription - Lunix Pharma">
           <input type="hidden" name="from_name" value="Lunix Pharma Website">
-          <input type="hidden" name="form_source" value="Newsletter">
+          <input type="hidden" name="form" value="Newsletter">
           <!-- Honeypot -->
           <input type="checkbox" name="botcheck" class="sr-only" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;">
 
@@ -837,19 +1329,19 @@
 </section>
 <!-- Newsletter Section End -->
 
-<!-- Thank You Popup (Modal) — same behavior as contact form: no icon, stays until OK -->
+<!-- Thank You Popup (Modal) -->
 <div id="nl-thanks-modal" class="nl-modal" aria-hidden="true" role="dialog" aria-modal="false" aria-labelledby="nl-thanks-title">
   <div class="nl-modal__backdrop"></div>
   <div class="nl-modal__dialog" role="document">
     <div class="nl-modal__content">
       <h3 id="nl-thanks-title">Thank you!</h3>
       <p>You’re subscribed.</p>
-      <button class="theme_button color2 inverse min_width_button nl-modal__ok" type="button" id="nl-ok">OK</button>
+      <button class="btn-default btn-highlighted" type="button" id="nl-ok">OK</button>
     </div>
   </div>
 </div>
 
-<!-- Scoped Styles (no footer background set; inherits your dark blue) -->
+<!-- Scoped Styles (modal sits above sticky header) -->
 <style>
   .footer-newsletter { color:#fff; }
   .footer-newsletter .section_header { color:#fff; }
@@ -891,29 +1383,35 @@
 
   /* Errors only (on dark footer) */
   #nl-status{ margin-top:10px; font-size:14px; min-height:18px; }
-  #nl-status.nl-error{ color:#fff; } /* white error text for contrast */
-  /* (No success class, we show the modal instead) */
+  #nl-status.nl-error{ color:#fff; }
 
-  /* ===== Newsletter Modal (no icon, closes only on OK) ===== */
-  .nl-modal{ position:fixed; inset:0; display:none; z-index:1050; }
-  .nl-modal.is-open{ display:block; }
-  .nl-modal__backdrop{ position:absolute; inset:0; background:rgba(0,0,0,.55); }
+  /* ===== Newsletter Modal (above sticky header, centered) ===== */
+  .nl-modal{
+    position:fixed; inset:0; display:none;
+    z-index:20000;           /* higher than your header's z-index */
+    align-items:center; justify-content:center; /* center the dialog */
+  }
+  .nl-modal.is-open{ display:flex; }
+  .nl-modal__backdrop{
+    position:absolute; inset:0; background:rgba(0,0,0,.55);
+  }
   .nl-modal__dialog{
-    position:relative; margin:8vh auto; background:#fff; border-radius:12px;
-    max-width:460px; width:92%; box-shadow:0 20px 50px rgba(0,0,0,.25); overflow:hidden;
+    position:relative; background:#fff; border-radius:12px;
+    max-width:460px; width:92%;
+    box-shadow:0 20px 50px rgba(0,0,0,.25); overflow:hidden;
+    z-index:1; /* above backdrop */
   }
   .nl-modal__content{ padding:28px 22px 24px; text-align:center; }
   .nl-modal__content h3{ margin:0 0 8px; font-size:22px; }
   .nl-modal__content p{ margin:0 0 14px; font-size:15px; color:#444; }
   .nl-modal__ok{ margin-top:6px; }
   @media (max-width:575px){
-    .nl-modal__dialog{ margin:6vh auto; }
     .nl-modal__content h3{ font-size:20px; }
     .nl-modal__content p{ font-size:14px; }
   }
 </style>
 
-<!-- AJAX submit + Thank You popup (same behavior as contact form) -->
+<!-- AJAX submit + Thank You popup -->
 <script>
   (function(){
     const form   = document.getElementById('newsletter-form');
@@ -934,7 +1432,7 @@
       modal.setAttribute('aria-hidden','false');
       modal.setAttribute('aria-modal','true');
       document.body.style.overflow = 'hidden';
-      okBtn.focus(); // keep behavior consistent with contact form
+      okBtn.focus();
     }
     function closeModal(){
       modal.classList.remove('is-open');
@@ -943,7 +1441,7 @@
       document.body.style.overflow = '';
     }
 
-    // Close only via OK (no backdrop/ESC close, same as contact form)
+    // Close only via OK (consistent with your contact form)
     okBtn.addEventListener('click', closeModal);
 
     form.addEventListener('submit', async function(e){
@@ -970,7 +1468,6 @@
 
         if(res.ok){
           form.reset();
-          // No success text under the button; show popup only
           setError('');
           openModal();
         }else{
@@ -990,6 +1487,7 @@
     });
   })();
 </script>
+
 
 <br><br>
                     <div class="about-footer">
