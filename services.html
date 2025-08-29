@@ -10,7 +10,7 @@
     <meta name="keywords" content="">
     <meta name="author" content="Awaiken">
     <!-- Page Title -->
-    <title>Lunix Pharma | Products</title>
+    <title>Lunix Pharma | Trusted US Pharmaceutical Solutions for Better Health</title>
     <!-- Favicon Icon -->
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
     <!-- Google Fonts Css-->
@@ -45,96 +45,122 @@
         </div>
     </div>
     <!-- Preloader End -->
+<!-- Header Start -->
+<header class="main-header">
+  <div class="header-sticky">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <!-- Logo Start -->
+        <a class="navbar-brand" href="./">
+          <img src="images/logo.png" alt="Lunix Pharma Logo" style="width: 200px;">
+        </a>
+        <!-- Logo End -->
 
-    <!-- Header Start -->
-    <header class="main-header">
-        <div class="header-sticky">
-            <nav class="navbar navbar-expand-lg">
-                <div class="container">
-                    <!-- Logo Start -->
-                    <a class="navbar-brand" href="./">
-						<img src="images/logo.png" alt="Lunix Pharma Logo" style="width: 200px;">
-					</a>
-                    <!-- Logo End -->
+        <!-- Main Menu Start -->
+        <div class="collapse navbar-collapse main-menu">
+          <div class="nav-menu-wrapper">
+            <ul class="navbar-nav mr-auto" id="menu">
+              <li><a class="nav-link" href="index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+              <li class="nav-item"><a class="nav-link" href="services.html">Products</a></li>
+              <li class="nav-item"><a class="nav-link" href="team.html">Directors</a></li>
+              <li class="nav-item"><a class="nav-link" href="manufacturing.html">Manufacturing</a></li>
+              <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
 
-                    <!-- Main Menu Start -->
-                    <div class="collapse navbar-collapse main-menu">
-                        <div class="nav-menu-wrapper">
-                            <ul class="navbar-nav mr-auto" id="menu">
-                                <li><a class="nav-link" href="index.html">Home</a>
-                                    
-                                </li>
-                                <li class="nav-item"><a class="nav-link" href="about.html">About Us</a>
-                                    <li class="nav-item"><a class="nav-link" href="services.html">Products</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="team.html">Directors</a></li>
-                                      <li class="nav-item"><a class="nav-link" href="manufacturing.html">Manufacturing</a></li>
-                                  
-                                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
-                            </ul>
-                        </div>
+          <!-- Header Btn Start -->
+          <div class="header-btn brochure-dropdown">
+            <button class="btn-default btn-highlighted brochure-toggle" type="button"
+                    aria-haspopup="true" aria-expanded="false">
+              Download Brochure <span class="brochure-caret"></span>
+            </button>
 
-                       <!-- Header Btn Start -->
-<!-- Header Btn Start -->
-<div class="header-btn brochure-dropdown">
-  <button class="btn-default btn-highlighted brochure-toggle" type="button"
-          aria-haspopup="true" aria-expanded="false">
-    Download Brochure <span class="brochure-caret"></span>
-  </button>
+            <ul class="brochure-menu" role="menu" aria-label="Brochure Downloads">
+              <li role="none">
+                <a role="menuitem" href="/LP-Presentation.pdf" download>LP - Presentation</a>
+              </li>
+              <li role="none">
+                <a role="menuitem" href="/LP-Brochure.pdf" download>LP - Brochure</a>
+              </li>
+            </ul>
+          </div>
+          <!-- Header Btn End -->
+        </div>
+        <!-- Main Menu End -->
 
-  <ul class="brochure-menu" role="menu" aria-label="Brochure Downloads">
-    <li role="none">
-      <a role="menuitem" href="/LP-Presentation.pdf" download style="color: rgb(69, 86, 106)">LP - Presentation</a>
-    </li>
-    <li role="none">
-      <a role="menuitem" href="/LP-Presentation.pdf" download style="color: rgb(69, 86, 106)">LP - Brochure</a>
-    </li>
-  </ul>
-</div>
-<!-- Header Btn End -->
+        <div class="navbar-toggle"></div>
+      </div>
+    </nav>
+    <div class="responsive-menu"></div>
+  </div>
+</header>
+<!-- Header End -->
 
-<!-- Minimal styles scoped to the dropdown -->
 <style>
+  /* Sticky Header */
+  .main-header {
+    position: fixed !important;
+    top: 0; left: 0; right: 0;
+    width: 100%;
+    z-index: 10000 !important;
+    background: #fff;
+  }
+
+  .main-header .navbar { width: 100%; }
+
+  /* Nav links: soft gray + semi-bold */
+  .main-header .navbar-nav .nav-link {
+    color: rgba(0,0,0,0.6) !important; /* soft gray */
+    font-weight: 600; /* semi-bold for better visibility */
+    transition: color 0.2s ease;
+  }
+  .main-header .navbar-nav .nav-link:hover {
+    color: rgba(0,0,0,0.85) !important; /* darker on hover */
+  }
+
+  .main-header.header-shadow {
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  }
+
+  body.has-fixed-header { padding-top: var(--header-h, 80px) !important; }
+
+  /* Brochure dropdown */
   .brochure-dropdown { position: relative; }
   .brochure-toggle { display: inline-flex; align-items: center; gap: 8px; }
   .brochure-caret {
-    display:inline-block; width:0; height:0; border-left:5px solid transparent;
-    border-right:5px solid transparent; border-top:6px solid currentColor;
+    display:inline-block; width:0; height:0;
+    border-left:5px solid transparent;
+    border-right:5px solid transparent;
+    border-top:6px solid currentColor;
     transform: translateY(1px);
   }
-
   .brochure-menu {
     position: absolute; top: 100%; right: 0;
     min-width: 220px; margin-top: 8px; padding: 8px 0;
     background: #fff; border: 1px solid #e6e6e6; border-radius: 6px;
     box-shadow: 0 8px 24px rgba(0,0,0,.08);
-    list-style: none; display: none; z-index: 1000;
+    list-style: none; display: none; z-index: 11000;
   }
   .brochure-dropdown.open .brochure-menu { display: block; }
-
   .brochure-menu a {
-    display: block; padding: 10px 14px; text-decoration: none;
-    color: inherit;
+    display: block; padding: 10px 14px; text-decoration: none; color: rgba(0,0,0,0.7);
   }
   .brochure-menu a:hover { background: #f6f6f6; }
 
-  /* Mobile: make dropdown flow in the layout so it doesn’t overflow off-screen */
+  /* Mobile */
   @media (max-width: 991px) {
     .brochure-dropdown { width: 100%; }
-    .brochure-menu {
-      position: static; width: 100%; margin-top: 6px;
-      border-radius: 4px;
-    }
+    .brochure-menu { position: static; width: 100%; margin-top: 6px; border-radius: 4px; }
   }
 </style>
 
-<!-- Tiny, dependency-free JS (supports multiple dropdowns if you add more later) -->
 <script>
+  // Brochure dropdown
   (function () {
     const dropdowns = document.querySelectorAll('.brochure-dropdown');
     dropdowns.forEach(dd => {
       const btn = dd.querySelector('.brochure-toggle');
-      const menu = dd.querySelector('.brochure-menu');
-
       function close() {
         dd.classList.remove('open');
         btn.setAttribute('aria-expanded', 'false');
@@ -144,24 +170,54 @@
         const isOpen = dd.classList.toggle('open');
         btn.setAttribute('aria-expanded', String(isOpen));
       }
-
       btn.addEventListener('click', toggle);
-
-      // Close on outside click
-      document.addEventListener('click', (e) => {
-        if (!dd.contains(e.target)) close();
-      });
-
-      // Close on Escape
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') close();
-      });
+      document.addEventListener('click', (e) => { if (!dd.contains(e.target)) close(); });
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
     });
   })();
+
+  // Fixed header padding + shadow
+  (function () {
+    const header = document.querySelector('.main-header');
+    if (!header) return;
+
+    const root = document.documentElement;
+    const body = document.body;
+
+    function setBodyPadding() {
+      const h = header.getBoundingClientRect().height;
+      root.style.setProperty('--header-h', h + 'px');
+      body.classList.add('has-fixed-header');
+    }
+
+    function onScroll() {
+      if (window.scrollY > 4) header.classList.add('header-shadow');
+      else header.classList.remove('header-shadow');
+    }
+
+    const ro = new ResizeObserver(setBodyPadding);
+    ro.observe(header);
+
+    setBodyPadding();
+    onScroll();
+
+    window.addEventListener('load', setBodyPadding);
+    window.addEventListener('resize', setBodyPadding, { passive: true });
+    window.addEventListener('scroll', onScroll, { passive: true });
+  })();
 </script>
+ 
 
-<!-- Header Btn End -->
 
+                    </div>
+                    <!-- Main Menu End -->
+                    <div class="navbar-toggle"></div>
+                </div>
+            </nav>
+            <div class="responsive-menu"></div>
+        </div>
+    </header>
+    <!-- Header End -->
                     </div>
                     <!-- Main Menu End -->
                     <div class="navbar-toggle"></div>
@@ -672,7 +728,7 @@
                 <div class="col-lg-12">
                     <!-- Footer Copyright Start -->
                     <div class="footer-copyright-text">
-                        <p>© 2025 All Rights Reserved. </p>
+                        <p>Copyright © 2025 All Rights Reserved. </p>
                     </div>
                     <!-- Footer Copyright End -->
                 </div>
@@ -715,7 +771,6 @@
 </body>
 
 </html>
-
 
 
 
