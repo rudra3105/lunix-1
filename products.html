@@ -620,158 +620,93 @@
 </script>
 
 <!-- Footer Start -->
-<footer class="main-footer bg-section dark-section">
+    <footer class="main-footer bg-section dark-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <!-- About Footer Start -->
+
+<!-- Newsletter Section Start (Footer) -->
+<section id="newsletter" class="footer-newsletter section_padding_top_60 section_padding_bottom_60">
   <div class="container">
-    <div class="row">
-      <!-- Col 1 -->
-      <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
-        <div class="about-footer">
-          <!-- Footer Logo -->
-          <div class="footer-logo">
-            <img src="images/logo.png" alt="Lunix Pharma Logo" style="width: 200px; height:auto;">
-          </div>
-
-          <!-- About text -->
-          <div class="about-footer-content">
-            <p>
-              Lunix Pharma is a GMP-certified manufacturer of high-quality nutraceuticals, pharmaceuticals,
-              and biological products — committed to innovation, safety, and global healthcare standards.
-            </p>
-          </div>
-
-          <!-- Newsletter (Inline, responsive; no nested .container) -->
-          <section id="newsletter" class="footer-newsletter section_padding_top_30 section_padding_bottom_10">
-            <div class="newsletter-wrap">
-              <div class="newsletter-left">
-                <h3 class="section_header">Subscribe to Our Newsletter</h3>
-                <p class="newsletter-subtitle">
-                  Get updates on new formulations, research insights, and Lunix Pharma announcements.
-                </p>
-              </div>
-
-              <div class="newsletter-right">
-                <form id="newsletter-form" class="newsletter-form" method="POST" action="https://api.web3forms.com/submit" novalidate>
-                  <input type="hidden" name="access_key" value="9c972c00-d3bd-4cfc-9959-687fe3eda848">
-                  <input type="hidden" name="subject" value="New Newsletter Subscription - Lunix Pharma">
-                  <input type="hidden" name="from_name" value="Lunix Pharma Website">
-                  <input type="hidden" name="form" value="Newsletter">
-                  <input type="checkbox" name="botcheck" class="sr-only" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;">
-
-                  <label for="nl-email" class="sr-only">Email Address</label>
-                  <input id="nl-email" name="email" type="email" placeholder="Enter your email" required>
-                  <button type="submit" class="newsletter-btn" id="nl-submit">Subscribe</button>
-                </form>
-
-                <small class="newsletter-note">We respect your privacy. Unsubscribe anytime.</small>
-                <div id="nl-status" class="nl-error" aria-live="polite"></div>
-              </div>
-            </div>
-          </section>
-
-          <!-- Thank You Popup (Modal) -->
-          <div id="nl-thanks-modal" class="nl-modal" aria-hidden="true" role="dialog" aria-modal="false" aria-labelledby="nl-thanks-title">
-            <div class="nl-modal__backdrop"></div>
-            <div class="nl-modal__dialog" role="document">
-              <div class="nl-modal__content">
-                <h3 id="nl-thanks-title">Thank you!</h3>
-                <p>You’re subscribed.</p>
-                <button class="btn-default btn-highlighted" type="button" id="nl-ok">OK</button>
-              </div>
-            </div>
-          </div>
-        </div>
+    <div class="newsletter-wrap">
+      <!-- Left -->
+      <div class="newsletter-left">
+        <h3 class="section_header">Subscribe to Our Newsletter</h3>
+        <p class="newsletter-subtitle">
+          Get updates on new formulations, research insights, and Lunix Pharma announcements.
+        </p>
       </div>
 
-      <!-- Col 2 -->
-      <div class="col-lg-5 col-md-7 mb-4 mb-lg-0">
-        <div class="footer-links-box">
-          <div class="footer-links">
-            <h3>Quick Links</h3>
-            <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="about.html">About us</a></li>
-              <li><a href="products.html">Products</a></li>
-              <li><a href="contact.html">Contact us</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
+      <!-- Right -->
+      <div class="newsletter-right">
+        <form id="newsletter-form" class="newsletter-form" method="POST" action="https://api.web3forms.com/submit" novalidate>
+          <input type="hidden" name="access_key" value="9c972c00-d3bd-4cfc-9959-687fe3eda848">
+          <input type="hidden" name="subject" value="New Newsletter Subscription - Lunix Pharma">
+          <input type="hidden" name="from_name" value="Lunix Pharma Website">
+          <input type="hidden" name="form" value="Newsletter">
+          <!-- Honeypot -->
+          <input type="checkbox" name="botcheck" class="sr-only" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;">
 
-      <!-- Col 3 -->
-      <div class="col-lg-3 col-md-5">
-        <div class="footer-links footer-contact" itemscope itemtype="https://schema.org/Organization">
-          <h3>Contact Info</h3>
-          <ul class="footer-contact-list">
-            <li class="footer-contact-item">
-              <span class="footer-contact-label"><strong>Address:</strong></span>
-              <address class="footer-contact-value" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
-                <span itemprop="streetAddress">211 E, 7th Street, Suite 620,</span>
-                <span itemprop="addressLocality">Austin</span>,
-                <span itemprop="addressRegion">Texas</span>
-                <span itemprop="postalCode">78701</span>,
-                <span itemprop="addressCountry">USA</span>
-              </address>
-            </li>
+          <label for="nl-email" class="sr-only">Email Address</label>
+          <input id="nl-email" name="email" type="email" placeholder="Enter your email" required>
+          <button type="submit" class="newsletter-btn" id="nl-submit">Subscribe</button>
+        </form>
 
-            <li class="footer-contact-item">
-              <span class="footer-contact-label"><strong>Email:</strong></span>
-              <a class="footer-contact-value" href="mailto:info@lunixpharma.com" itemprop="email">info@lunixpharma.com</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="col-12">
-        <div class="footer-copyright-text">
-          <p>© 2025 All Rights Reserved.</p>
-        </div>
+        <small class="newsletter-note">We respect your privacy. Unsubscribe anytime.</small>
+        <!-- Errors only (no success text; success uses modal) -->
+        <div id="nl-status" class="nl-error" aria-live="polite"></div>
       </div>
     </div>
   </div>
-</footer>
-<!-- Footer End -->
+</section>
+<!-- Newsletter Section End -->
 
-<!-- Scoped, minimal responsive styles (Footer + Newsletter) -->
+<!-- Thank You Popup (Modal) -->
+<div id="nl-thanks-modal" class="nl-modal" aria-hidden="true" role="dialog" aria-modal="false" aria-labelledby="nl-thanks-title">
+  <div class="nl-modal__backdrop"></div>
+  <div class="nl-modal__dialog" role="document">
+    <div class="nl-modal__content">
+      <h3 id="nl-thanks-title">Thank you!</h3>
+      <p>You’re subscribed.</p>
+      <button class="btn-default btn-highlighted" type="button" id="nl-ok">OK</button>
+    </div>
+  </div>
+</div>
+
+<!-- Scoped Styles (modal sits above sticky header) -->
 <style>
-  /* Footer column spacing on small screens */
-  @media (max-width: 991px){
-    .main-footer .mb-lg-0 { margin-bottom: 24px !important; }
-  }
-
-  /* Footer newsletter (in-column; no nested container width) */
   .footer-newsletter { color:#fff; }
-  .footer-newsletter .section_header { color:#fff; font-size:18px; margin-bottom:6px; }
-  .footer-newsletter .newsletter-subtitle { color:#ddd; font-size:14px; margin-bottom:10px; }
-  .footer-newsletter .newsletter-note { color:#bbb; font-size:12px; }
+  .footer-newsletter .section_header { color:#fff; }
+  .footer-newsletter .newsletter-subtitle { color:#ddd; }
+  .footer-newsletter .newsletter-note { color:#bbb; font-size:13px; }
 
   .footer-newsletter .newsletter-wrap{
-    display:flex; align-items:flex-start; justify-content:space-between;
-    gap:16px; flex-wrap:wrap;
+    display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap;
   }
-  .footer-newsletter .newsletter-left{ flex:1 1 240px; min-width:220px; }
-  .footer-newsletter .newsletter-right{ flex:1 1 300px; min-width:220px; }
+  .footer-newsletter .newsletter-left{ flex:1 1 320px; min-width:260px; }
+  .footer-newsletter .newsletter-right{ flex:1 1 420px; min-width:260px; }
 
   .footer-newsletter .newsletter-form{
-    display:flex; align-items:center; gap:8px; width:100%;
+    display:flex; align-items:center; gap:12px; width:100%;
   }
   .footer-newsletter .newsletter-form input{
-    flex:1 1 auto; min-width:0; padding:10px 12px;
+    flex:1 1 auto; min-width:0; padding:12px 14px;
     border:1px solid #555; border-radius:6px;
-    background:transparent; color:#fff; font-size:14px; outline:none;
+    background:transparent; color:#fff; font-size:16px; outline:none;
   }
   .footer-newsletter .newsletter-form input::placeholder{ color:#aaa; }
   .footer-newsletter .newsletter-form input:focus{
-    border-color:#00b4d8; box-shadow:0 0 0 2px rgba(0,180,216,.35);
+    border-color:#00b4d8; box-shadow:0 0 0 2px rgba(0,180,216,.4);
   }
   .footer-newsletter .newsletter-btn{
     background:linear-gradient(135deg,#00b4d8,#0073e6);
     color:#fff; border:none; border-radius:6px;
-    padding:10px 18px; font-size:14px; font-weight:600; cursor:pointer;
-    transition:all .25s ease; box-shadow:0 4px 10px rgba(0,115,230,.25);
-    white-space:nowrap;
+    padding:12px 28px; font-size:16px; font-weight:600; cursor:pointer;
+    transition:all .3s ease; box-shadow:0 4px 10px rgba(0,115,230,.25);
   }
   .footer-newsletter .newsletter-btn:hover{
-    background:linear-gradient(135deg,#0096c7,#005bb5); transform:translateY(-1px);
+    background:linear-gradient(135deg,#0096c7,#005bb5); transform:translateY(-2px);
   }
 
   @media (max-width:767px){
@@ -780,40 +715,39 @@
   }
 
   /* Errors only (on dark footer) */
-  #nl-status{ margin-top:8px; font-size:13px; min-height:18px; }
+  #nl-status{ margin-top:10px; font-size:14px; min-height:18px; }
   #nl-status.nl-error{ color:#fff; }
 
-  /* Newsletter Modal (above sticky header, centered) */
+  /* ===== Newsletter Modal (above sticky header, centered) ===== */
   .nl-modal{
     position:fixed; inset:0; display:none;
-    z-index:20000; align-items:center; justify-content:center;
+    z-index:20000;           /* higher than your header's z-index */
+    align-items:center; justify-content:center; /* center the dialog */
   }
   .nl-modal.is-open{ display:flex; }
-  .nl-modal__backdrop{ position:absolute; inset:0; background:rgba(0,0,0,.55); }
+  .nl-modal__backdrop{
+    position:absolute; inset:0; background:rgba(0,0,0,.55);
+  }
   .nl-modal__dialog{
     position:relative; background:#fff; border-radius:12px;
     max-width:460px; width:92%;
-    box-shadow:0 20px 50px rgba(0,0,0,.25); overflow:hidden; z-index:1;
+    box-shadow:0 20px 50px rgba(0,0,0,.25); overflow:hidden;
+    z-index:1; /* above backdrop */
   }
-  .nl-modal__content{ padding:24px 20px; text-align:center; }
-  .nl-modal__content h3{ margin:0 0 6px; font-size:20px; }
-  .nl-modal__content p{ margin:0 0 12px; font-size:14px; color:#444; }
-
-  /* Footer contact list */
-  .footer-contact .footer-contact-list { list-style: none; margin: 0; padding: 0; }
-  .footer-contact .footer-contact-item {
-    display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px; flex-wrap: wrap;
+  .nl-modal__content{ padding:28px 22px 24px; text-align:center; }
+  .nl-modal__content h3{ margin:0 0 8px; font-size:22px; }
+  .nl-modal__content p{ margin:0 0 14px; font-size:15px; color:#444; }
+  .nl-modal__ok{ margin-top:6px; }
+  @media (max-width:575px){
+    .nl-modal__content h3{ font-size:20px; }
+    .nl-modal__content p{ font-size:14px; }
   }
-  .footer-contact .footer-contact-label { font-weight: 600; min-width: 82px; }
-  .footer-contact .footer-contact-value { flex: 1 1 auto; word-break: break-word; }
-  .footer-contact address { margin: 0; font-style: normal; }
 </style>
 
-<!-- Newsletter AJAX (unchanged behavior; kept here for completeness) -->
+<!-- AJAX submit + Thank You popup -->
 <script>
   (function(){
     const form   = document.getElementById('newsletter-form');
-    if (!form) return;
     const email  = document.getElementById('nl-email');
     const submit = document.getElementById('nl-submit');
     const status = document.getElementById('nl-status');
@@ -831,7 +765,7 @@
       modal.setAttribute('aria-hidden','false');
       modal.setAttribute('aria-modal','true');
       document.body.style.overflow = 'hidden';
-      okBtn && okBtn.focus();
+      okBtn.focus();
     }
     function closeModal(){
       modal.classList.remove('is-open');
@@ -840,7 +774,8 @@
       document.body.style.overflow = '';
     }
 
-    okBtn && okBtn.addEventListener('click', closeModal);
+    // Close only via OK (consistent with your contact form)
+    okBtn.addEventListener('click', closeModal);
 
     form.addEventListener('submit', async function(e){
       e.preventDefault();
@@ -886,7 +821,138 @@
   })();
 </script>
 
-  
+
+<br><br>
+                    <div class="about-footer">
+                        <!-- Footer Logo Start -->
+                        <div class="footer-logo">
+                           <img src="images/logo.png" alt="Lunix Pharma Logo" style="width: 200px;">
+                        </div>
+                        <!-- Footer Logo End -->
+
+                        <!-- About Footer Content Start -->
+                        <div class="about-footer-content">
+                            <p>Lunix Pharma is a GMP-certified manufacturer of high-quality nutraceuticals, pharmaceuticals, and biological products — committed to innovation, safety, and global healthcare standards.</p>
+
+                        </div>
+                        <!-- About Footer Content End -->
+
+                        <!-- Footer Newsletter Box Start -->
+                       
+                        <!-- Footer Newsletter Box End -->
+                    </div>
+                    <!-- About Footer End -->
+                </div>
+
+                <div class="col-lg-5 col-md-7">
+                    <!-- Footer Links Box Start -->
+                    <div class="footer-links-box">
+                        <!-- Footer Links Start -->
+                        <div class="footer-links">
+                            <h3>Quick Links</h3>
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="about.html">About us</a></li>
+                                <li><a href="products.html">Products</a></li>
+                                <li><a href="contact.html">contact us</a></li>
+                            </ul>
+                        </div>
+                        <!-- Footer Links End -->
+
+						
+                       
+                        <!-- Footer Links Start -->
+
+						<!-- Contact Info (Footer) -->
+
+
+                        <!-- Footer Links End -->
+                    </div>
+                    <!-- Footer Links Box End -->
+                </div>
+
+                
+                <div class="col-lg-3 col-md-5">
+                   <!-- Footer Contact Info -->
+<div class="footer-links footer-contact" itemscope itemtype="https://schema.org/Organization">
+  <h3>Contact Info</h3>
+
+  <ul class="footer-contact-list">
+    <!-- Address -->
+    <li class="footer-contact-item">
+      <span class="footer-contact-label"><strong>Address:</strong></span>
+      <address class="footer-contact-value" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+        211 E, 7th Street, Suite 620,<br>
+        Austin, Texas 78701,<br>
+        USA
+      </address>
+    </li>
+
+    <!-- Email -->
+    <li class="footer-contact-item">
+      <span class="footer-contact-label"><strong>Email:</strong></span>
+      <a class="footer-contact-value" href="mailto:info@lunixpharma.com" itemprop="email">
+        info@lunixpharma.com
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- Scoped Styles -->
+<style>
+  .footer-contact .footer-contact-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .footer-contact .footer-contact-item {
+    margin-bottom: 15px;
+  }
+
+  .footer-contact .footer-contact-label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 4px;
+    color: #fff; /* adjust to your footer color */
+  }
+
+  .footer-contact .footer-contact-value {
+    display: block;
+    color: #ccc; /* adjust to your footer design */
+    text-transform: none !important; /* prevents Capitalization */
+    word-break: break-word; /* prevents overflow */
+  }
+
+  .footer-contact address {
+    font-style: normal;
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  /* Responsive tweak */
+  @media (max-width: 575px) {
+    .footer-contact .footer-contact-label {
+      margin-bottom: 2px;
+    }
+  }
+</style>
+
+                    <!-- Footer Working Hour Box End -->
+                </div>
+
+                <div class="col-lg-12">
+                    <!-- Footer Copyright Start -->
+                    <div class="footer-copyright-text">
+                        <p>© 2025 All Rights Reserved. </p>
+                    </div>
+                    <!-- Footer Copyright End -->
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer End -->
+
     <!-- Jquery Library File -->
     <script src="js/jquery-3.7.1.min.js"></script>
     <!-- Bootstrap js file -->
