@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Awaiken">
+    <!-- Page Title -->
+    <title>Products | Lunix Pharma</title>
+    <!-- Favicon Icon -->
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+    <!-- Google Fonts Css-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Sora:wght@100..800&display=swap" rel="stylesheet">
+    <!-- Bootstrap Css -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <!-- SlickNav Css -->
+    <link href="css/slicknav.min.css" rel="stylesheet">
+    <!-- Swiper Css -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <!-- Font Awesome Icon Css-->
+    <link href="css/all.min.css" rel="stylesheet" media="screen">
+    <!-- Animated Css -->
+    <link href="css/animate.css" rel="stylesheet">
+    <!-- Magnific Popup Core Css File -->
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <!-- Mouse Cursor Css File -->
+    <link rel="stylesheet" href="css/mousecursor.css">
+    <!-- Main Custom Css -->
+    <link href="css/custom.css" rel="stylesheet" media="screen">
+</head>
+
+<body>
+
+    <!-- Preloader Start -
+    <div class="preloader">
+        <div class="loading-container">
+            <div class="loading"></div>
+            <div id="loading-icon"><img src="images/loader.svg" alt=""></div>
+        </div>
+    </div>
+    <!-- Preloader End -->
+<!-- Header Start -->
+<header class="main-header">
+  <div class="header-sticky">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <!-- Logo Start -->
+        <a class="navbar-brand" href="./">
+          <img src="images/logo.png" alt="Lunix Pharma Logo" style="width: 200px;">
+        </a>
+        <!-- Logo End -->
+
+        <!-- Main Menu Start -->
+        <div class="collapse navbar-collapse main-menu">
+          <div class="nav-menu-wrapper">
+  <ul class="navbar-nav mr-auto" id="menu">
+    <li><a class="nav-link" href="index.html">Home</a></li>
+
+    <!-- About Us Dropdown -->
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="about.html" id="aboutDropdown" role="button" aria-haspopup="true" aria-expanded="false">
+        About Us
+      </a>
+      <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+        <li><a class="dropdown-item" href="about.html">About Us</a></li>
+        <li><a class="dropdown-item" href="leadership.html">Leadership Team</a></li>
+        <li><a class="dropdown-item" href="business-team.html">Business Team</a></li>
+      </ul>
+    </li>
+
+    <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+    <li class="nav-item"><a class="nav-link" href="manufacturing.html">Manufacturing</a></li>
+    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+  </ul>
+</div>
+
+<!-- Styles for Dropdown -->
+<style>
+  .navbar-nav .dropdown-menu {
+    display: none;
+    position: absolute;
+    background: #fff;
+    min-width: 200px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 8px 0;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    z-index: 1000;
+  }
+  .navbar-nav .dropdown-menu .dropdown-item {
+    padding: 10px 16px;
+    color: #333;
+    text-decoration: none;
+    display: block;
+  }
+  .navbar-nav .dropdown-menu .dropdown-item:hover {
+    background: #f6f6f6;
+  }
+  /* Show on hover */
+  .navbar-nav .nav-item.dropdown:hover > .dropdown-menu {
+    display: block;
+  }
+</style>
+
+
+          <!-- Header Btn Start -->
+          <div class="header-btn brochure-dropdown">
+            <button class="btn-default btn-highlighted brochure-toggle" type="button"
+                    aria-haspopup="true" aria-expanded="false">
+              Download Brochure <span class="brochure-caret"></span>
+            </button>
+
+            <ul class="brochure-menu" role="menu" aria-label="Brochure Downloads">
+              <li role="none">
+                <a role="menuitem" href="/Lunix Pharma-Pharmaceutical_Products.pdf" download style="color: rgba(0,0,0,0.6);">Pharmaceutical Products</a>
+              </li>
+              <li role="none">
+                <a role="menuitem" href="/Lunix Pharma - Nutraceuticals Products.pdf" download style="color: rgba(0,0,0,0.6);">Nutraceuticals Products</a>
+              </li>
+            </ul>
+          </div>
+          <!-- Header Btn End -->
+        </div>
+        <!-- Main Menu End -->
+        <div class="navbar-toggle"></div>
+      </div>
+    </nav>
+    <div class="responsive-menu"></div>
+  </div>
+</header>
+<!-- Header End -->
+
+<style>
+  /* Sticky Header */
+  .main-header {
+    position: fixed !important;
+    top: 0; left: 0; right: 0;
+    width: 100%;
+    z-index: 10000 !important;
+    background: #fff;
+  }
+
+  .main-header .navbar { width: 100%; }
+
+  /* Nav links: soft gray + semi-bold */
+  .main-header .navbar-nav .nav-link {
+    color: rgba(0,0,0,0.6) !important; /* soft gray */
+    font-weight: 600; /* semi-bold for better visibility */
+    transition: color 0.2s ease;
+  }
+  .main-header .navbar-nav .nav-link:hover {
+    color: rgba(0,0,0,0.85) !important; /* darker on hover */
+  }
+
+  .main-header.header-shadow {
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  }
+
+  body.has-fixed-header { padding-top: var(--header-h, 80px) !important; }
+
+  /* Brochure dropdown */
+  .brochure-dropdown { position: relative; }
+  .brochure-toggle { display: inline-flex; align-items: center; gap: 8px; }
+  .brochure-caret {
+    display:inline-block; width:0; height:0;
+    border-left:5px solid transparent;
+    border-right:5px solid transparent;
+    border-top:6px solid currentColor;
+    transform: translateY(1px);
+  }
+  .brochure-menu {
+    position: absolute; top: 100%; right: 0;
+    min-width: 220px; margin-top: 8px; padding: 8px 0;
+    background: #fff; border: 1px solid #e6e6e6; border-radius: 6px;
+    box-shadow: 0 8px 24px rgba(0,0,0,.08);
+    list-style: none; display: none; z-index: 11000;
+  }
+  .brochure-dropdown.open .brochure-menu { display: block; }
+  .brochure-menu a {
+    display: block; padding: 10px 14px; text-decoration: none; color: rgba(0,0,0,0.7);
+  }
+  .brochure-menu a:hover { background: #f6f6f6; }
+
+  /* Mobile */
+  @media (max-width: 991px) {
+    .brochure-dropdown { width: 100%; }
+    .brochure-menu { position: static; width: 100%; margin-top: 6px; border-radius: 4px; }
+  }
+</style>
+
+<script>
+  // Brochure dropdown
+  (function () {
+    const dropdowns = document.querySelectorAll('.brochure-dropdown');
+    dropdowns.forEach(dd => {
+      const btn = dd.querySelector('.brochure-toggle');
+      function close() {
+        dd.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+      function toggle(e) {
+        e.preventDefault();
+        const isOpen = dd.classList.toggle('open');
+        btn.setAttribute('aria-expanded', String(isOpen));
+      }
+      btn.addEventListener('click', toggle);
+      document.addEventListener('click', (e) => { if (!dd.contains(e.target)) close(); });
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
+    });
+  })();
+
+  // Fixed header padding + shadow
+  (function () {
+    const header = document.querySelector('.main-header');
+    if (!header) return;
+
+    const root = document.documentElement;
+    const body = document.body;
+
+    function setBodyPadding() {
+      const h = header.getBoundingClientRect().height;
+      root.style.setProperty('--header-h', h + 'px');
+      body.classList.add('has-fixed-header');
+    }
+
+    function onScroll() {
+      if (window.scrollY > 4) header.classList.add('header-shadow');
+      else header.classList.remove('header-shadow');
+    }
+
+    const ro = new ResizeObserver(setBodyPadding);
+    ro.observe(header);
+
+    setBodyPadding();
+    onScroll();
+
+    window.addEventListener('load', setBodyPadding);
+    window.addEventListener('resize', setBodyPadding, { passive: true });
+    window.addEventListener('scroll', onScroll, { passive: true });
+  })();
+</script>
+ 
+    <!-- Header End -->
+     
+  <!-- Page Header Start -->
+<div class="page-header parallaxie">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <!-- Page Header Box Start -->
+        <div class="page-header-box">
+          <h1 class="text-anime-style-3" data-cursor="-opaque">Products</h1>
+          <nav class="wow fadeInUp">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="index.html">home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Products</li>
+            </ol>
+          </nav>
+        </div>
+        <!-- Page Header Box End -->
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Page Header End -->
+
+<!-- Scoped Styles to Reduce Header Size -->
+<style>
+  .page-header {
+    padding: 40px 0;   /* reduce vertical padding */
+  }
+
+  .page-header-box h1 {
+    font-size: 32px;   /* smaller heading */
+    margin-bottom: 10px;
+  }
+
+  .page-header-box nav {
+    margin-top: 5px;   /* tighter breadcrumb spacing */
+  }
+
+  .breadcrumb {
+    margin-bottom: 0; 
+    font-size: 14px;   /* smaller breadcrumb text */
+  }
+</style>
+
+    <!-- Scrolling Ticker Section Start -->
+    <div class="our-scrolling-ticker">
+        <!-- Scrolling Ticker Start -->
+        <div class="scrolling-ticker-box">
+             
+
+           
+        </div>
+        <!-- Scrolling Ticker End -->
+    </div><br><br>
+
+    <!-- Products Accordion Start -->
+<section id="products-accordion" class="section_padding_top_80 section_padding_bottom_80">
+  <div class="container">
+
+    <h2 class="section_header text-center bottommargin_30">Our Products</h2>
+
+    <div class="products-accordion">
+
+      <!-- Item 1: Nutraceutical Supplements -->
+      <div class="pa-item with_border rounded">
+        <button class="pa-trigger" type="button"
+                aria-expanded="false" aria-controls="pa-panel-1" id="pa-trigger-1">
+          <span class="pa-title">Nutraceutical Supplements</span>
+          <span class="pa-caret" aria-hidden="true"></span>
+        </button>
+
+        <div class="pa-panel" id="pa-panel-1" role="region" aria-labelledby="pa-trigger-1">
+          <div class="with_padding">
+            <div class="row service-list">
+              <!-- Product Card -->
+              <div class="col-lg-4 col-md-6 mb-4">
+                <div class="product-card text-center h-100">
+                  <div class="product-img">
+                    <img src="images/Bone.jpeg" alt="Bone Health">
+                  </div>
+                  <h3>Bone Health</h3>
+                  <p>Calcium, Vitamin D3, and co-factors to support bone density and strength.</p>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 mb-4">
+                <div class="product-card text-center h-100">
+                  <div class="product-img">
+                    <img src="images/Joint.jpeg" alt="Joint Health">
+                  </div>
+                  <h3>Joint Health</h3>
+                  <p>Actives to aid mobility, flexibility, and healthy cartilage function.</p>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 mb-4">
+                <div class="product-card text-center h-100">
+                  <div class="product-img">
+                    <img src="images/sexual.jpeg" alt="Sexual Health">
+                  </div>
+                  <h3>Sexual Health</h3>
+                  <p>Formulations for vitality, stamina, and hormonal balance.</p>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 mb-4">
+                <div class="product-card text-center h-100">
+                  <div class="product-img">
+                    <img src="images/Women.jpeg" alt="Woman Health">
+                  </div>
+                  <h3>Woman Health</h3>
+                  <p>Women-focused nutrients for menstrual, prenatal, and postnatal care.</p>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 mb-4">
+                <div class="product-card text-center h-100">
+                  <div class="product-img">
+                    <img src="images/Digestive.jpeg" alt="Digestive Health">
+                  </div>
+                  <h3>Digestive Health</h3>
+                  <p>Probiotics, enzymes, and fibers for gut balance and comfort.</p>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 mb-4">
+                <div class="product-card text-center h-100">
+                  <div class="product-img">
+                    <img src="images/IMMUNE SYSTEM.jpeg" alt="Immune Health">
+                  </div>
+                  <h3>Immune Health</h3>
+                  <p>Antioxidants and immunity boosters for round-the-year defense.</p>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 mb-4">
+                <div class="product-card text-center h-100">
+                  <div class="product-img">
+                    <img src="images/Eye.jpeg" alt="Eye Health">
+                  </div>
+                  <h3>Eye Health</h3>
+                  <p>Lutein, zeaxanthin &amp; essentials for vision and retinal health.</p>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 mb-4">
+                <div class="product-card text-center h-100">
+                  <div class="product-img">
+                    <img src="images/Heart.jpeg" alt="Heart Health">
+                  </div>
+                  <h3>Heart Health</h3>
+                  <p>Cardio-support nutrients for healthy lipids and circulation.</p>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 mb-4">
+                <div class="product-card text-center h-100">
+                  <div class="product-img">
+                    <img src="images/Nerve.jpeg" alt="Nerve Health">
+                  </div>
+                  <h3>Nerve Health</h3>
+                  <p>Neuro-support vitamins and co-factors for nerve function.</p>
+                </div>
+              </div>
+            </div><!-- /.row -->
+          </div><!-- /.with_padding -->
+        </div><!-- /.pa-panel -->
+      </div><!-- /.pa-item -->
+
+      <!-- Item 2: Pharmaceuticals -->
+      <div class="pa-item with_border rounded">
+        <button class="pa-trigger" type="button"
+                aria-expanded="false" aria-controls="pa-panel-2" id="pa-trigger-2">
+          <span class="pa-title">Pharmaceuticals</span>
+          <span class="pa-caret" aria-hidden="true"></span>
+        </button>
+        <div class="pa-panel" id="pa-panel-2" role="region" aria-labelledby="pa-trigger-2">
+          <div class="with_padding">
+            <ul class="pa-list">
+              <li>Tablets &amp; Capsules</li>
+              <li>Syrups &amp; Suspensions</li>
+              <li>Topical Formulations (Creams/Ointments/Gels)</li>
+              <li>Injectables</li>
+              <li>Controlled-Release &amp; Novel Dosage Forms</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 3: Biologicals -->
+      <div class="pa-item with_border rounded">
+        <button class="pa-trigger" type="button"
+                aria-expanded="false" aria-controls="pa-panel-3" id="pa-trigger-3">
+          <span class="pa-title">Biologicals</span>
+          <span class="pa-caret" aria-hidden="true"></span>
+        </button>
+        <div class="pa-panel" id="pa-panel-3" role="region" aria-labelledby="pa-trigger-3">
+          <div class="with_padding">
+            <ul class="pa-list">
+              <li>Probiotic Blends</li>
+              <li>Enzymatic Preparations</li>
+              <li>Biosimilar Research Support</li>
+              <li>Peptide &amp; Protein Formulations</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 4: Wellness Solutions -->
+      <div class="pa-item with_border rounded">
+        <button class="pa-trigger" type="button"
+                aria-expanded="false" aria-controls="pa-panel-4" id="pa-trigger-4">
+          <span class="pa-title">Wellness Solutions</span>
+          <span class="pa-caret" aria-hidden="true"></span>
+        </button>
+        <div class="pa-panel" id="pa-panel-4" role="region" aria-labelledby="pa-trigger-4">
+          <div class="with_padding">
+            <ul class="pa-list">
+              <li>Skin &amp; Hair Nutrition</li>
+              <li>Metabolic Support</li>
+              <li>Sleep &amp; Stress Management</li>
+              <li>Men’s Vitality</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /.products-accordion -->
+
+  </div>
+</section>
+<!-- Products Accordion End -->
+
+<!-- Scoped CSS (Products) -->
+<style>
+  .products-accordion { max-width: 1100px; margin: 0 auto; }
+  .pa-item + .pa-item { margin-top: 14px; }
+
+  .pa-trigger{
+    width:100%;
+    display:flex; align-items:center; justify-content:space-between;
+    padding:16px 18px;
+    background:#fff;
+    border:0;
+    cursor:pointer;
+    border-radius:8px;
+    font-size:18px; font-weight:700; text-align:left;
+  }
+  .with_border .pa-trigger{ background:transparent; }
+  .pa-title{ color:#0a2540; }
+  .pa-caret{
+    width: 12px; height:12px; border-right:2px solid #0a2540; border-bottom:2px solid #0a2540;
+    transform: rotate(-45deg); transition: transform .25s ease;
+  }
+  .pa-trigger[aria-expanded="true"] .pa-caret{ transform: rotate(45deg); }
+
+  .pa-panel{
+    overflow:hidden;
+    max-height:0; transition:max-height .35s ease;
+    background:#fff; border-top:1px solid #eef1f5; border-radius:0 0 8px 8px;
+  }
+  .pa-item.open .pa-panel{ border-top-color:#e7ebf1; }
+
+  .with_padding{ padding:16px 18px; }
+  .pa-list{ margin:0; padding-left:18px; }
+  .pa-list li{ margin:6px 0; color:#445566; line-height:1.5; }
+
+  /* Product cards inside panel 1 */
+  .product-card {
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  .product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  }
+  .product-card h3 {
+    font-size: 18px;
+    margin: 14px 0 6px;
+    color: #000;
+  }
+  .product-card p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #333;
+    margin: 0;
+  }
+  .product-img {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    border-radius: 6px;
+  }
+  .product-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display:block;
+  }
+
+  /* Responsive tweaks for product cards */
+  @media (max-width: 991px){
+    .product-img { height: 160px; }
+  }
+  @media (max-width: 575px){
+    .product-img { height: 140px; }
+    .product-card { padding: 16px; }
+    .pa-trigger{ font-size:16px; padding:14px 16px; }
+    .with_padding{ padding:14px 16px; }
+  }
+</style>
+
+<!-- Accessible, dependency-free JS (Accordion) -->
+<script>
+  (function(){
+    const items = document.querySelectorAll('.products-accordion .pa-item');
+
+    function closeAll(except){
+      items.forEach(it=>{
+        if (it !== except){
+          it.classList.remove('open');
+          const btn = it.querySelector('.pa-trigger');
+          const panel = it.querySelector('.pa-panel');
+          btn.setAttribute('aria-expanded','false');
+          panel.style.maxHeight = 0;
+        }
+      });
+    }
+
+    items.forEach((it)=>{
+      const btn = it.querySelector('.pa-trigger');
+      const panel = it.querySelector('.pa-panel');
+
+      // Start closed
+      btn.setAttribute('aria-expanded','false');
+      panel.style.maxHeight = 0;
+
+      function toggle(){
+        const isOpen = it.classList.toggle('open');
+        if (isOpen){
+          btn.setAttribute('aria-expanded','true');
+          panel.style.maxHeight = panel.scrollHeight + 'px';
+          closeAll(it); // keep one open; remove if you want multiple
+        } else {
+          btn.setAttribute('aria-expanded','false');
+          panel.style.maxHeight = 0;
+        }
+      }
+
+      btn.addEventListener('click', toggle);
+      btn.addEventListener('keydown', (e)=>{
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault(); toggle();
+        }
+      });
+
+      // Recompute height on resize if open
+      window.addEventListener('resize', ()=>{
+        if (it.classList.contains('open')){
+          panel.style.maxHeight = panel.scrollHeight + 'px';
+        }
+      });
+    });
+  })();
+</script>
+
+<!-- Footer Start -->
+<footer class="main-footer bg-section dark-section">
+  <div class="container">
+    <div class="row">
+      <!-- Col 1 -->
+      <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+        <div class="about-footer">
+          <!-- Footer Logo -->
+          <div class="footer-logo">
+            <img src="images/logo.png" alt="Lunix Pharma Logo" style="width: 200px; height:auto;">
+          </div>
+
+          <!-- About text -->
+          <div class="about-footer-content">
+            <p>
+              Lunix Pharma is a GMP-certified manufacturer of high-quality nutraceuticals, pharmaceuticals,
+              and biological products — committed to innovation, safety, and global healthcare standards.
+            </p>
+          </div>
+
+          <!-- Newsletter (Inline, responsive; no nested .container) -->
+          <section id="newsletter" class="footer-newsletter section_padding_top_30 section_padding_bottom_10">
+            <div class="newsletter-wrap">
+              <div class="newsletter-left">
+                <h3 class="section_header">Subscribe to Our Newsletter</h3>
+                <p class="newsletter-subtitle">
+                  Get updates on new formulations, research insights, and Lunix Pharma announcements.
+                </p>
+              </div>
+
+              <div class="newsletter-right">
+                <form id="newsletter-form" class="newsletter-form" method="POST" action="https://api.web3forms.com/submit" novalidate>
+                  <input type="hidden" name="access_key" value="9c972c00-d3bd-4cfc-9959-687fe3eda848">
+                  <input type="hidden" name="subject" value="New Newsletter Subscription - Lunix Pharma">
+                  <input type="hidden" name="from_name" value="Lunix Pharma Website">
+                  <input type="hidden" name="form" value="Newsletter">
+                  <input type="checkbox" name="botcheck" class="sr-only" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;">
+
+                  <label for="nl-email" class="sr-only">Email Address</label>
+                  <input id="nl-email" name="email" type="email" placeholder="Enter your email" required>
+                  <button type="submit" class="newsletter-btn" id="nl-submit">Subscribe</button>
+                </form>
+
+                <small class="newsletter-note">We respect your privacy. Unsubscribe anytime.</small>
+                <div id="nl-status" class="nl-error" aria-live="polite"></div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Thank You Popup (Modal) -->
+          <div id="nl-thanks-modal" class="nl-modal" aria-hidden="true" role="dialog" aria-modal="false" aria-labelledby="nl-thanks-title">
+            <div class="nl-modal__backdrop"></div>
+            <div class="nl-modal__dialog" role="document">
+              <div class="nl-modal__content">
+                <h3 id="nl-thanks-title">Thank you!</h3>
+                <p>You’re subscribed.</p>
+                <button class="btn-default btn-highlighted" type="button" id="nl-ok">OK</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Col 2 -->
+      <div class="col-lg-5 col-md-7 mb-4 mb-lg-0">
+        <div class="footer-links-box">
+          <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About us</a></li>
+              <li><a href="products.html">Products</a></li>
+              <li><a href="contact.html">Contact us</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Col 3 -->
+      <div class="col-lg-3 col-md-5">
+        <div class="footer-links footer-contact" itemscope itemtype="https://schema.org/Organization">
+          <h3>Contact Info</h3>
+          <ul class="footer-contact-list">
+            <li class="footer-contact-item">
+              <span class="footer-contact-label"><strong>Address:</strong></span>
+              <address class="footer-contact-value" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                <span itemprop="streetAddress">211 E, 7th Street, Suite 620,</span>
+                <span itemprop="addressLocality">Austin</span>,
+                <span itemprop="addressRegion">Texas</span>
+                <span itemprop="postalCode">78701</span>,
+                <span itemprop="addressCountry">USA</span>
+              </address>
+            </li>
+
+            <li class="footer-contact-item">
+              <span class="footer-contact-label"><strong>Email:</strong></span>
+              <a class="footer-contact-value" href="mailto:info@lunixpharma.com" itemprop="email">info@lunixpharma.com</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-12">
+        <div class="footer-copyright-text">
+          <p>© 2025 All Rights Reserved.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- Footer End -->
+
+<!-- Scoped, minimal responsive styles (Footer + Newsletter) -->
+<style>
+  /* Footer column spacing on small screens */
+  @media (max-width: 991px){
+    .main-footer .mb-lg-0 { margin-bottom: 24px !important; }
+  }
+
+  /* Footer newsletter (in-column; no nested container width) */
+  .footer-newsletter { color:#fff; }
+  .footer-newsletter .section_header { color:#fff; font-size:18px; margin-bottom:6px; }
+  .footer-newsletter .newsletter-subtitle { color:#ddd; font-size:14px; margin-bottom:10px; }
+  .footer-newsletter .newsletter-note { color:#bbb; font-size:12px; }
+
+  .footer-newsletter .newsletter-wrap{
+    display:flex; align-items:flex-start; justify-content:space-between;
+    gap:16px; flex-wrap:wrap;
+  }
+  .footer-newsletter .newsletter-left{ flex:1 1 240px; min-width:220px; }
+  .footer-newsletter .newsletter-right{ flex:1 1 300px; min-width:220px; }
+
+  .footer-newsletter .newsletter-form{
+    display:flex; align-items:center; gap:8px; width:100%;
+  }
+  .footer-newsletter .newsletter-form input{
+    flex:1 1 auto; min-width:0; padding:10px 12px;
+    border:1px solid #555; border-radius:6px;
+    background:transparent; color:#fff; font-size:14px; outline:none;
+  }
+  .footer-newsletter .newsletter-form input::placeholder{ color:#aaa; }
+  .footer-newsletter .newsletter-form input:focus{
+    border-color:#00b4d8; box-shadow:0 0 0 2px rgba(0,180,216,.35);
+  }
+  .footer-newsletter .newsletter-btn{
+    background:linear-gradient(135deg,#00b4d8,#0073e6);
+    color:#fff; border:none; border-radius:6px;
+    padding:10px 18px; font-size:14px; font-weight:600; cursor:pointer;
+    transition:all .25s ease; box-shadow:0 4px 10px rgba(0,115,230,.25);
+    white-space:nowrap;
+  }
+  .footer-newsletter .newsletter-btn:hover{
+    background:linear-gradient(135deg,#0096c7,#005bb5); transform:translateY(-1px);
+  }
+
+  @media (max-width:767px){
+    .footer-newsletter .newsletter-form{ flex-direction:column; align-items:stretch; }
+    .footer-newsletter .newsletter-btn{ width:100%; }
+  }
+
+  /* Errors only (on dark footer) */
+  #nl-status{ margin-top:8px; font-size:13px; min-height:18px; }
+  #nl-status.nl-error{ color:#fff; }
+
+  /* Newsletter Modal (above sticky header, centered) */
+  .nl-modal{
+    position:fixed; inset:0; display:none;
+    z-index:20000; align-items:center; justify-content:center;
+  }
+  .nl-modal.is-open{ display:flex; }
+  .nl-modal__backdrop{ position:absolute; inset:0; background:rgba(0,0,0,.55); }
+  .nl-modal__dialog{
+    position:relative; background:#fff; border-radius:12px;
+    max-width:460px; width:92%;
+    box-shadow:0 20px 50px rgba(0,0,0,.25); overflow:hidden; z-index:1;
+  }
+  .nl-modal__content{ padding:24px 20px; text-align:center; }
+  .nl-modal__content h3{ margin:0 0 6px; font-size:20px; }
+  .nl-modal__content p{ margin:0 0 12px; font-size:14px; color:#444; }
+
+  /* Footer contact list */
+  .footer-contact .footer-contact-list { list-style: none; margin: 0; padding: 0; }
+  .footer-contact .footer-contact-item {
+    display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px; flex-wrap: wrap;
+  }
+  .footer-contact .footer-contact-label { font-weight: 600; min-width: 82px; }
+  .footer-contact .footer-contact-value { flex: 1 1 auto; word-break: break-word; }
+  .footer-contact address { margin: 0; font-style: normal; }
+</style>
+
+<!-- Newsletter AJAX (unchanged behavior; kept here for completeness) -->
+<script>
+  (function(){
+    const form   = document.getElementById('newsletter-form');
+    if (!form) return;
+    const email  = document.getElementById('nl-email');
+    const submit = document.getElementById('nl-submit');
+    const status = document.getElementById('nl-status');
+
+    const modal  = document.getElementById('nl-thanks-modal');
+    const okBtn  = document.getElementById('nl-ok');
+
+    function setError(msg){
+      status.textContent = msg || '';
+      status.className = msg ? 'nl-error' : '';
+    }
+
+    function openModal(){
+      modal.classList.add('is-open');
+      modal.setAttribute('aria-hidden','false');
+      modal.setAttribute('aria-modal','true');
+      document.body.style.overflow = 'hidden';
+      okBtn && okBtn.focus();
+    }
+    function closeModal(){
+      modal.classList.remove('is-open');
+      modal.setAttribute('aria-hidden','true');
+      modal.setAttribute('aria-modal','false');
+      document.body.style.overflow = '';
+    }
+
+    okBtn && okBtn.addEventListener('click', closeModal);
+
+    form.addEventListener('submit', async function(e){
+      e.preventDefault();
+      const value = (email.value || '').trim();
+      const valid = /^\S+@\S+\.\S+$/.test(value);
+      if(!valid){
+        setError('Please enter a valid email address.');
+        email.focus();
+        return;
+      }
+
+      submit.disabled = true;
+      const old = submit.textContent;
+      submit.textContent = 'Subscribing...';
+      setError('');
+
+      try{
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if(res.ok){
+          form.reset();
+          setError('');
+          openModal();
+        }else{
+          let msg = 'Something went wrong. Please try again later.';
+          try{
+            const out = await res.json();
+            if(out && out.message) msg = out.message;
+          }catch(_){}
+          setError(msg);
+        }
+      }catch(_){
+        setError('Network error. Please try again.');
+      }finally{
+        submit.disabled = false;
+        submit.textContent = old;
+      }
+    });
+  })();
+</script>
+
+  
+    <!-- Jquery Library File -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <!-- Bootstrap js file -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Validator js file -->
+    <script src="js/validator.min.js"></script>
+    <!-- SlickNav js file -->
+    <script src="js/jquery.slicknav.js"></script>
+    <!-- Swiper js file -->
+    <script src="js/swiper-bundle.min.js"></script>
+    <!-- Counter js file -->
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <!-- Magnific js file -->
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <!-- SmoothScroll -->
+    <script src="js/SmoothScroll.js"></script>
+    <!-- Parallax js -->
+    <script src="js/parallaxie.js"></script>
+    <!-- MagicCursor js file -->
+    <script src="js/gsap.min.js"></script>
+    <script src="js/magiccursor.js"></script>
+    <!-- Text Effect js file -->
+    <script src="js/SplitText.js"></script>
+    <script src="js/ScrollTrigger.min.js"></script>
+    <!-- YTPlayer js File -->
+    <script src="js/jquery.mb.YTPlayer.min.js"></script>
+    <!-- Wow js file -->
+    <script src="js/wow.min.js"></script>
+    <!-- Main Custom js file -->
+    <script src="js/function.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
