@@ -10,7 +10,7 @@
     <meta name="keywords" content="">
     <meta name="author" content="Awaiken">
     <!-- Page Title -->
-    <title>Manufacturing | Lunix Pharma</title>
+    <title>About Us | Lunix Pharma</title>
     <!-- Favicon Icon -->
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
     <!-- Google Fonts Css-->
@@ -59,15 +59,55 @@
         <!-- Main Menu Start -->
         <div class="collapse navbar-collapse main-menu">
           <div class="nav-menu-wrapper">
-            <ul class="navbar-nav mr-auto" id="menu">
-              <li><a class="nav-link" href="index.html">Home</a></li>
-              <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-              <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
-              <li class="nav-item"><a class="nav-link" href="team.html">Directors</a></li>
-              <li class="nav-item"><a class="nav-link" href="manufacturing.html">Manufacturing</a></li>
-              <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
-            </ul>
-          </div>
+  <ul class="navbar-nav mr-auto" id="menu">
+    <li><a class="nav-link" href="index.html">Home</a></li>
+
+    <!-- About Us Dropdown -->
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="about.html" id="aboutDropdown" role="button" aria-haspopup="true" aria-expanded="false">
+        About Us
+      </a>
+      <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+        <li><a class="dropdown-item" href="about.html">About Us</a></li>
+        <li><a class="dropdown-item" href="leadership.html">Leadership Team</a></li>
+        <li><a class="dropdown-item" href="business-team.html">Business Team</a></li>
+      </ul>
+    </li>
+
+    <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+    <li class="nav-item"><a class="nav-link" href="manufacturing.html">Manufacturing</a></li>
+    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+  </ul>
+</div>
+
+<!-- Styles for Dropdown -->
+<style>
+  .navbar-nav .dropdown-menu {
+    display: none;
+    position: absolute;
+    background: #fff;
+    min-width: 200px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 8px 0;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    z-index: 1000;
+  }
+  .navbar-nav .dropdown-menu .dropdown-item {
+    padding: 10px 16px;
+    color: #333;
+    text-decoration: none;
+    display: block;
+  }
+  .navbar-nav .dropdown-menu .dropdown-item:hover {
+    background: #f6f6f6;
+  }
+  /* Show on hover */
+  .navbar-nav .nav-item.dropdown:hover > .dropdown-menu {
+    display: block;
+  }
+</style>
+
 
           <!-- Header Btn Start -->
           <div class="header-btn brochure-dropdown">
@@ -78,17 +118,18 @@
 
             <ul class="brochure-menu" role="menu" aria-label="Brochure Downloads">
               <li role="none">
-                <a role="menuitem" href="/LP-Presentation.pdf" download>LP - Presentation</a>
+                <a role="menuitem" href="/Lunix Pharma-Pharmaceutical_Products.pdf" download style="color: rgba(0,0,0,0.6);">Pharmaceutical Products</a>
               </li>
               <li role="none">
-                <a role="menuitem" href="/LP-Brochure.pdf" download>LP - Brochure</a>
+                <a role="menuitem" href="/Lunix Pharma - Nutraceuticals Products.pdf" download style="color: rgba(0,0,0,0.6);">Nutraceuticals Products</a>
               </li>
             </ul>
           </div>
           <!-- Header Btn End -->
         </div>
         <!-- Main Menu End -->
-        <div class="navbar-toggle"></div>
+
+               <div class="navbar-toggle"></div>
       </div>
     </nav>
     <div class="responsive-menu"></div>
