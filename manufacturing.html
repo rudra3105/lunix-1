@@ -295,11 +295,118 @@
         </div>
       </div>
     </div>
+
+    <!-- ===== New Video Sections (Vaccine / Supplement / Injectable) ===== -->
+    <div class="row topmargin_50">
+      <div class="col-12">
+        <!-- Section: Vaccine Plant -->
+        <div class="manufacturing-video-section with_border rounded mb-5 p-3">
+          <div class="row align-items-center">
+            <div class="col-lg-5 col-md-12">
+              <h3 class="mb-3">Vaccine Plant</h3>
+              <p class="mb-0">A walkthrough of our vaccine manufacturing capabilities and sterile production areas.</p>
+            </div>
+            <div class="col-lg-7 col-md-12 mt-3 mt-lg-0">
+              <div class="responsive-embed">
+                <iframe
+                  src="https://www.youtube.com/embed/ovkvgCcOb38"
+                  title="Vaccine Plant - Lunix Pharma"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                  loading="lazy"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section: Supplement Plant -->
+        <div class="manufacturing-video-section with_border rounded mb-5 p-3">
+          <div class="row align-items-center">
+            <div class="col-lg-5 col-md-12">
+              <h3 class="mb-3">Supplement Plant</h3>
+              <p class="mb-0">Highlights of our nutraceutical & supplement production lines and quality control processes.</p>
+            </div>
+            <div class="col-lg-7 col-md-12 mt-3 mt-lg-0">
+              <div class="responsive-embed">
+                <iframe
+                  src="https://www.youtube.com/embed/PNIm1SZYd0A"
+                  title="Supplement Plant - Lunix Pharma"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                  loading="lazy"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section: Injectable Plant -->
+        <div class="manufacturing-video-section with_border rounded mb-5 p-3">
+          <div class="row align-items-center">
+            <div class="col-lg-5 col-md-12">
+              <h3 class="mb-3">Injectable Plant</h3>
+              <p class="mb-0">Overview of our sterile injectable manufacturing suites, aseptic filling, and safety systems.</p>
+            </div>
+            <div class="col-lg-7 col-md-12 mt-3 mt-lg-0">
+              <div class="responsive-embed">
+                <iframe
+                  src="https://www.youtube.com/embed/axJ2UO-BHSA"
+                  title="Injectable Plant - Lunix Pharma"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                  loading="lazy"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!-- ===== End video sections ===== -->
+
   </div>
 </section>
 <!-- Manufacturing Section End -->
-   
-    
+
+<!-- Scoped styles for responsive video embeds and spacing -->
+<style>
+  /* Ensure the embed keeps 16:9 ratio and is responsive */
+  .responsive-embed {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+    overflow: hidden;
+    border-radius: 8px;
+    background: #000;
+  }
+  .responsive-embed iframe {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+
+  /* Video section card polish */
+  .manufacturing-video-section { background: #ffffff; }
+  .manufacturing-video-section h3 { font-size: 1.4rem; margin-bottom: .5rem; }
+  .manufacturing-video-section p { color: #444; }
+
+  /* Spacing adjustments */
+  @media (max-width: 991px) {
+    .manufacturing-video-section .responsive-embed { padding-bottom: 56.25%; } /* keep ratio */
+    .manufacturing-video-section .col-lg-5 { margin-bottom: 12px; }
+  }
+
+  @media (max-width: 575px) {
+    .manufacturing-video-section { padding: 12px; }
+    .manufacturing-video-section h3 { font-size: 1.2rem; }
+  }
+</style>
+
    <br><br><br>
       <!-- Footer Start -->
     <footer class="main-footer bg-section dark-section">
